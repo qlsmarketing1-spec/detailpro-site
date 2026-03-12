@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, serif;
+}
+
+:root {
+  --automation-violet: #5e25fa;
+  --deep-workflow: #280aa5;
+  --midnight-stack: #050119;
+  --signal-fog: #e7e6ee;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--midnight-stack);
+  color: var(--signal-fog);
+  scroll-behavior: smooth;
+}
+
+.font-serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--midnight-stack);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--deep-workflow);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--automation-violet);
+}
+
+/* Keyframes */
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-slow-reverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes ticker-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes flow-inward {
+  0% { stroke-dashoffset: 100; opacity: 0; }
+  20% { opacity: 1; stroke: var(--automation-violet); }
+  80% { opacity: 1; stroke: var(--automation-violet); }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* Helper Classes */
+.animate-ticker { animation: ticker-slide 40s linear infinite; }
+.animate-ticker:hover { animation-play-state: paused; }
+.animate-spin-slow { animation: rotate-slow 60s linear infinite; }
+.animate-spin-slow-reverse { animation: rotate-slow-reverse 60s linear infinite; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-flow-in { stroke-dasharray: 10 100; animation: flow-inward 3s linear infinite; }
+
+.mask-radial {
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+}
+
+.primary-purple { color: var(--automation-violet); }
+.bg-primary-purple { background-color: var(--automation-violet); }
+.border-primary-purple { border-color: var(--automation-violet); }
