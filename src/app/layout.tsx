@@ -19,7 +19,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://detailpro.tech'),
+  metadataBase: new URL('https://www.detailpro.tech'),
   title: {
     default: 'DetailPro - #1 Auto Detailing Software & Growth Platform',
     template: '%s | DetailPro',
@@ -34,9 +34,12 @@ export const metadata: Metadata = {
     'ceramic coating business',
     'detailing automation',
   ],
+  alternates: {
+    canonical: 'https://www.detailpro.tech',
+  },
   openGraph: {
     type: 'website',
-    url: 'https://detailpro.tech',
+    url: 'https://www.detailpro.tech',
     title: 'DetailPro - #1 Auto Detailing Software & Growth Platform',
     description:
       "Automate your detailing shop's growth. High-converting ads and lead follow-up systems for serious operators.",
@@ -48,9 +51,6 @@ export const metadata: Metadata = {
     description:
       'Scale your detailing business from $5k to $20k+ per month with our automated growth engine.',
     images: ['https://storage.googleapis.com/detail_pro_main/og-image.jpg'],
-  },
-  icons: {
-    icon: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg',
   },
 };
 
@@ -65,11 +65,6 @@ const jsonLd = {
     price: '0',
     priceCurrency: 'USD',
     description: 'Free demo available for detailing shop operators.',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '128',
   },
   description:
     'High-performance growth software and lead automation platform for auto detailing and ceramic coating businesses.',

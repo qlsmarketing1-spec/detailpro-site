@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       images: [post.image],
-      url: `https://detailpro.tech/blog/${post.slug}`,
+      url: `https://www.detailpro.tech/blog/${post.slug}`,
     },
     alternates: {
-      canonical: `https://detailpro.tech/blog/${post.slug}`,
+      canonical: `https://www.detailpro.tech/blog/${post.slug}`,
     },
   };
 }
@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params }: Props) {
       name: 'DetailPro',
       logo: { '@type': 'ImageObject', url: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg' },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://detailpro.tech/blog/${post.slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.detailpro.tech/blog/${post.slug}` },
   };
 
   return (

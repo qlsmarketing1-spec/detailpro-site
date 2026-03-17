@@ -10,6 +10,9 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'Systems, strategies, and insights for detailers ready to dominate their local market.',
+  alternates: {
+    canonical: 'https://www.detailpro.tech/blog',
+  },
 };
 
 export default async function BlogPage() {
