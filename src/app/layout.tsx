@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const softwareAppJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: 'DetailPro',
@@ -70,6 +70,20 @@ const jsonLd = {
     'High-performance growth software and lead automation platform for auto detailing and ceramic coating businesses.',
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'DetailPro',
+  url: 'https://www.detailpro.tech',
+  logo: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg',
+  sameAs: [
+    'https://www.instagram.com/detailprogrowth',
+    'https://www.tiktok.com/@detailprogrowth',
+    'https://www.youtube.com/@DetailProGrowth',
+    'https://www.linkedin.com/company/111829166',
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -81,7 +95,11 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body className="bg-[#050119] text-[#e7e6ee] antialiased overflow-x-hidden selection:bg-[#5e25fa] selection:text-[#e7e6ee] font-sans">

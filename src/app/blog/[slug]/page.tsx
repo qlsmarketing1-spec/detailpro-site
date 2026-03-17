@@ -43,6 +43,37 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await fetchBlogPostBySlug(slug);
   if (!post) notFound();
 
+  const canonicalUrl = `https://www.detailpro.tech/blog/${post.slug}`;
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Blog',
+        item: 'https://www.detailpro.tech/blog',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: post.title,
+        item: canonicalUrl,
+      },
+    ],
+  };
+
+  const faqJsonLd = post.faq.length >= 2 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faq.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+  } : null;
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -56,12 +87,14 @@ export default async function BlogPostPage({ params }: Props) {
       name: 'DetailPro',
       logo: { '@type': 'ImageObject', url: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg' },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.detailpro.tech/blog/${post.slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
       <Navbar />
       <main className="max-w-3xl mx-auto px-4 py-24">
         <article>

@@ -12,4 +12,5 @@ export interface BlogPost {
   author?: string;
   featured: boolean;
   isPlaceholder?: boolean;
+  faq: { question: string; answer: string }[];
 }

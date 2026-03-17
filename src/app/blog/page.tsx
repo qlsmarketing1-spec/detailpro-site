@@ -8,7 +8,7 @@ import { fetchBlogPosts } from '@/lib/contentful';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Auto Detailing Business Blog | Tips & Growth Systems',
   description: 'Systems, strategies, and insights for detailers ready to dominate their local market.',
   alternates: {
     canonical: 'https://www.detailpro.tech/blog',

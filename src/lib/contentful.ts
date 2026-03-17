@@ -39,6 +39,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
         ? `https:${item.fields.image.fields.file.url}`
         : 'https://picsum.photos/seed/blog/800/600',
       featured: item.fields.featured || false,
+      faq: Array.isArray(item.fields.faq) ? item.fields.faq : [],
     }));
   } catch (err) {
     console.error('[Contentful] fetchBlogPosts error:', err);
@@ -72,6 +73,7 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
         ? `https:${item.fields.image.fields.file.url}`
         : 'https://picsum.photos/seed/blog/800/600',
       featured: item.fields.featured || false,
+      faq: Array.isArray(item.fields.faq) ? item.fields.faq : [],
     };
   } catch {
     return null;
