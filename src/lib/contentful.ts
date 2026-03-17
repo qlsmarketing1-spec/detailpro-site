@@ -23,7 +23,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
   try {
     const response = await c.getEntries({
       content_type: 'blogPost',
-      order: ['-fields.publishDate'] as any,
+      order: ['-sys.createdAt'] as any,
     });
 
     return response.items.map((item: any) => ({
@@ -40,7 +40,8 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
         : 'https://picsum.photos/seed/blog/800/600',
       featured: item.fields.featured || false,
     }));
-  } catch {
+  } catch (err) {
+    console.error('[Contentful] fetchBlogPosts error:', err);
     return [];
   }
 }

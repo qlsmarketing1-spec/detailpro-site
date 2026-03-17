@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { fetchBlogPosts } from '@/lib/contentful';
 
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await fetchBlogPosts();
 

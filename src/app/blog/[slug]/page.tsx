@@ -10,7 +10,7 @@ import { fetchBlogPosts, fetchBlogPostBySlug } from '@/lib/contentful';
 export const revalidate = 3600;
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -19,7 +19,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await fetchBlogPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await fetchBlogPostBySlug(slug);
   if (!post) return { title: 'Post Not Found' };
   return {
     title: post.title,
@@ -37,11 +38,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const post = await fetchBlogPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await fetchBlogPostBySlug(slug);
   if (!post) notFound();
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    image: post.image,
+    datePublished: post.publishDate,
+    author: { '@type': 'Organization', name: 'DetailPro' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'DetailPro',
+      logo: { '@type': 'ImageObject', url: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg' },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://detailpro.tech/blog/${post.slug}` },
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
       <main className="max-w-3xl mx-auto px-4 py-24">
         <article>

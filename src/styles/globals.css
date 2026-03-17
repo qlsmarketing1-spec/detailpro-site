@@ -54,7 +54,7 @@
   100% { stroke-dashoffset: 0; opacity: 0; }
 }
 
-.animate-ticker { animation: ticker-slide 40s linear infinite; }
+.animate-ticker { animation: ticker-slide 20s linear infinite; }
 .animate-ticker:hover { animation-play-state: paused; }
 .animate-spin-slow { animation: rotate-slow 60s linear infinite; }
 .animate-spin-slow-reverse { animation: rotate-slow-reverse 60s linear infinite; }
@@ -86,6 +86,8 @@
 }
 .article-content li { margin-bottom: 0.75rem !important; }
 .article-content strong { color: #e7e6ee !important; font-weight: 600 !important; }
+.article-content a { color: #5e25fa !important; text-decoration: underline !important; }
+.article-content a:hover { color: #7c4dff !important; }
 .article-content blockquote {
   border-left: 4px solid #5e25fa; padding-left: 1.5rem;
   font-style: italic; margin: 2rem 0; color: #d1d1d1;

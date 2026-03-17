@@ -2,46 +2,45 @@ import FAQItem from '@/components/ui/FAQItem';
 
 const faqs = [
   {
-    question: 'Is this just a CRM?',
-    answer: 'No. A CRM is just a place to store data. DetailPro is an active growth platform. We provide the ads, the automation, and the workflows to actually book the jobs for you. It\'s the difference between a filing cabinet and a sales team.',
+    question: "Why DetailPro instead of other shop management software?",
+    answer: "Most shop management tools hold you hostage with monthly subscription fees and lock you out when you stop paying. DetailPro gives you lifetime access — you own the system. On top of that, DetailPro is built with the most advanced tools for enterprise detailers: full booking, fleet pipeline management, multi-location support, and a CRM that actually understands the margin difference between a car wash and a ceramic job. It's not a repurposed generic tool. It was built from the ground up for this industry.",
   },
   {
-    question: 'What if I already have a CRM (like Urable)?',
-    answer: 'We work alongside it. Not replace it. DetailPro is focused on the \'Top of Funnel\' — getting the leads and booking the meetings. Once a job is booked, you can push it to your job management tool for invoicing and scheduling if you like.',
+    question: "What does 'revenue share' mean — can I get locked in?",
+    answer: "No flat monthly fees, no long-term contracts. We charge 10% of monthly revenue managed through the platform. That means our incentive is exactly the same as yours: grow your revenue. If you're not making money, we're not making money. It's alignment by design.",
   },
   {
-    question: 'Do I have to answer the automated texts?',
-    answer: 'Only when the lead asks a complex question that the system can\'t handle. Otherwise, it follows our proven script to get the car type, service interest, and booking time automatically.',
+    question: "How fast do leads actually get responded to?",
+    answer: "Under 5 minutes — automatically. The second a lead inquires through any connected channel, they receive an SMS. The system follows a proven script to qualify their budget, vehicle, and service interest before you ever pick up the phone. You only step in when a lead is ready to book.",
   },
   {
-    question: 'How much do I need to spend on ads?',
-    answer: 'We recommend starting with $15–$25 a day to see consistent results. Our system is designed to squeeze every penny out of that budget so you get the highest ROI possible.',
+    question: "What if I'm not getting results in 90 days?",
+    answer: "We go hands-on. Not 'here's a help article' hands-on — we get on a call, find the root cause, and fix it personally. The most common issue is lead follow-up speed, which is why we pre-qualify clients before onboarding. But if the system isn't working, we don't point fingers.",
   },
   {
-    question: 'Do you run the ads for me or do I manage them?',
-    answer: 'DetailPro provides the ad infrastructure, strategy, and systems — but you stay in control. We handle the setup and optimization framework so ads are built correctly from day one. You own the ad account, the data, and the spend. We stay aligned through performance-based pricing, which means we care deeply about how those ads convert into real booked jobs.',
+    question: "Do I need to already be running ads?",
+    answer: "No. We handle the full ad setup — Meta, Google, and the creative — from Day 1. You own the ad accounts and the data. We handle strategy, optimization, and spend management. Starting budget recommendation: $15–25/day to see consistent lead flow.",
   },
   {
-    question: 'How is DetailPro different from Housecall Pro, Jobber, or Urable?',
-    answer: 'Those tools are great at managing jobs after a customer is already booked. DetailPro focuses on what happens before that — generating demand, following up instantly, and converting leads into booked jobs. Many shops use DetailPro alongside their existing software, then push booked jobs into their job management tool for scheduling and invoicing. We offer seamless integration with Urable where all booked customers are automatically migrated.',
+    question: "Is this just software, or do you manage everything?",
+    answer: "Both. You get lifetime access to DetailPro software (CRM, pipelines, automations, messaging, analytics, booking). Plus done-for-you Meta and Google ads management, full system setup, and fleet lead pipeline management. It's a complete customer acquisition system, not a tool you figure out yourself.",
   },
   {
-    question: 'Is this built for solo operators or teams?',
-    answer: 'DetailPro builds the infrastructure within your business to become a top detailer in your area. This almost always means having a team. That is our goal.',
-  },
-  {
-    question: 'What makes a shop a good fit for DetailPro?',
-    answer: 'DetailPro is built for operators who answer leads promptly, care about systems and execution, and want repeatable growth — not quick wins. If you\'re already a top detailer looking to get to the next level. This is for you. It\'s not a fit for newbies looking for hands-off growth or instant results without involvement. The system works best when both sides execute.',
+    question: "Is DetailPro built for solo operators or teams?",
+    answer: "Both — but the goal is always to get you off the tools. DetailPro builds the infrastructure to make you a top operator in your market, which typically means building a team over time. We're not designed for side hustlers. We're for operators who are serious about building a business.",
   },
 ];
 
 export default function FAQSection() {
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 px-6 bg-[#050119]">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#e7e6ee] text-center mb-12">
-          Detailers ask us...
-        </h2>
+        <div className="text-center mb-16">
+          <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">FAQ</p>
+          <h2 className="text-4xl md:text-5xl font-black text-[#e7e6ee]">
+            Detailers ask us&hellip;
+          </h2>
+        </div>
         <div className="space-y-3">
           {faqs.map((faq) => (
             <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
