@@ -135,6 +135,21 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="article-content">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
           </div>
+
+          {/* FAQ Section */}
+          {post.faq.length > 0 && (
+            <section className="mt-16 pt-12 border-t border-white/10">
+              <h2 className="text-2xl font-bold text-[#e7e6ee] mb-8">Frequently Asked Questions</h2>
+              <div className="flex flex-col gap-6">
+                {post.faq.map((item, i) => (
+                  <div key={i} className="border border-white/10 rounded-xl p-6">
+                    <h3 className="text-[#e7e6ee] font-semibold text-lg mb-3">{item.question}</h3>
+                    <p className="text-[#a3a3a3] leading-relaxed">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </article>
 
         <ArticleCTA />
