@@ -51,6 +51,16 @@ export default function Footer() {
             <Link href="/privacy" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Privacy</Link>
           </div>
         </div>
+        <div className="mt-8 pt-8 border-t border-white/10 flex justify-center">
+          <a
+            href="https://www.detailprocrm.com/pricing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors"
+          >
+            Join Now
+          </a>
+        </div>
       </div>
     </footer>
   );
