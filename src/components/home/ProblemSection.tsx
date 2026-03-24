@@ -91,9 +91,14 @@ export default function ProblemSection() {
             ))}
 
             <div className="pt-4">
-              <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-[0_0_30px_rgba(94,37,250,0.4)]">
+              <a
+                href="https://www.detailprocrm.com/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-bold px-8 py-4 rounded-full text-lg transition-all hover:shadow-[0_0_30px_rgba(94,37,250,0.4)]"
+              >
                 Fix My Shop Today
-              </CalendlyButton>
+              </a>
             </div>
           </div>
 
