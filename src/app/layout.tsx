@@ -105,14 +105,14 @@ export default function RootLayout({
       <body className="bg-[#050119] text-[#e7e6ee] antialiased overflow-x-hidden selection:bg-[#5e25fa] selection:text-[#e7e6ee] font-sans">
         {children}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-JSBR62E0WZ"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`}
+            gtag('config', 'G-JSBR62E0WZ');`}
         </Script>
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
