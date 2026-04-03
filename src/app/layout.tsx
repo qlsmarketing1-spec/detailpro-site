@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'detailing automation',
   ],
   alternates: {
-    canonical: 'https://www.detailpro.tech',
+    canonical: 'https://www.detailpro.tech/',
   },
   openGraph: {
     type: 'website',
