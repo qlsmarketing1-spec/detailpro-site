@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { openCalendly } from '@/lib/calendly';
 
 const services = [
-  { label: 'CRM Software', href: '/software', desc: '$197/mo — lead automation' },
-  { label: 'Ads Management', href: '/ads', desc: '$2,397 setup + 10% rev share' },
-  { label: 'Website Build', href: '/website', desc: '$597 one-time — 48 hrs' },
+  { label: 'Fill My Calendar', href: '/ads', desc: 'Marketing partnership for detailers that want serious growth' },
+  { label: 'Software', href: '/software', desc: 'Stop losing jobs to slow follow-up' },
+  { label: 'Website Build', href: '/website', desc: 'Turn clicks into customers' },
 ];
 
 export default function Navbar() {
