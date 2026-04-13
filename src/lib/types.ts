@@ -1,3 +1,17 @@
+export type FormState = 'idle' | 'loading' | 'success' | 'error';
+
+export type QuizTier = 'starter' | 'growth' | 'scale';
+
+export interface QuizResult {
+  score: number;
+  tier: QuizTier;
+  insights: string[];
+  primaryCTA: string;
+  primaryCTALabel: string;
+  secondaryCTA?: string;
+  secondaryCTALabel?: string;
+}
+
 export interface BlogPost {
   id: string;
   title: string;

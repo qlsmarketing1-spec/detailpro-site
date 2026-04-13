@@ -5,7 +5,7 @@ const shops = [
   { name: 'CERAMIC PRO SHOP', style: 'font-black tracking-tighter uppercase' },
   { name: 'Gloss Theory', style: 'font-medium italic' },
   { name: 'REVIVE AUTO', style: 'font-bold tracking-widest uppercase' },
-  { name: 'ShineLab', style: 'font-semibold tracking-tight' },
+  { name: 'Shine Squad', style: 'font-semibold tracking-tight' },
   { name: 'VELOCITY DETAILING', style: 'font-black uppercase' },
   { name: 'Obsessed Auto', style: 'font-light tracking-wider' },
 ];

@@ -45,7 +45,10 @@ export default function Footer() {
           </div>
 
           {/* Right — Links */}
-          <div className="flex items-center justify-end gap-6">
+          <div className="flex items-center justify-end flex-wrap gap-x-6 gap-y-2">
+            <Link href="/software" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Software</Link>
+            <Link href="/ads" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Ads</Link>
+            <Link href="/website" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Website</Link>
             <Link href="/blog" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Blog</Link>
             <Link href="/terms" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Terms</Link>
             <Link href="/privacy" className="text-[#a3a3a3] hover:text-white transition-colors text-sm">Privacy</Link>

@@ -7,6 +7,7 @@ import ProblemSection from '@/components/home/ProblemSection';
 import SolutionSection from '@/components/home/SolutionSection';
 import HowItWorks from '@/components/home/HowItWorks';
 import EconomicsSection from '@/components/home/EconomicsSection';
+import AuditSection from '@/components/home/AuditSection';
 import TestimonialSection from '@/components/home/TestimonialSection';
 import GuaranteeSection from '@/components/home/GuaranteeSection';
 import FAQSection from '@/components/home/FAQSection';
@@ -30,6 +31,7 @@ export default function HomePage() {
         <SolutionSection />
         <HowItWorks />
         <EconomicsSection />
+        <AuditSection />
         <TestimonialSection />
         <GuaranteeSection />
         <FAQSection />
