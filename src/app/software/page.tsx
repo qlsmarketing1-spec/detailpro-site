@@ -39,7 +39,7 @@ const painPoints = [
   },
   {
     title: 'HCP outages and billing fights',
-    desc: 'VoIP outages lasting 30+ days. Held funds. Billing practices operators call predatory. That's your business running on someone else's reliability.',
+    desc: "VoIP outages lasting 30+ days. Held funds. Billing practices operators call predatory. That's your business running on someone else's reliability.",
   },
   {
     title: 'Leads lost in DMs and texts',

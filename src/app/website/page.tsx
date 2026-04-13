@@ -122,11 +122,11 @@ export default function WebsitePage() {
                 },
                 {
                   title: 'Slow sites lose jobs silently',
-                  desc: 'If your page takes over 3 seconds to load, most visitors leave. They don't call, they don't text — they just bounce to your competitor who loaded faster.',
+                  desc: "If your page takes over 3 seconds to load, most visitors leave. They don't call, they don't text — they just bounce to your competitor who loaded faster.",
                 },
                 {
                   title: 'Agency websites cost too much',
-                  desc: '$1,900–$3,200 setup + $199–$349/month from detailing-specific agencies. That's $5,000+ in the first year for a site that looks like every other ceramic shop.',
+                  desc: "$1,900–$3,200 setup + $199–$349/month from detailing-specific agencies. That's $5,000+ in the first year for a site that looks like every other ceramic shop.",
                 },
               ].map((p) => (
                 <div key={p.title} className="bg-white/3 border border-white/8 rounded-2xl p-6">

@@ -52,9 +52,9 @@ const included = [
 
 const faqs = [
   {
-    question: 'What's the minimum ad budget I need?',
+    question: "What's the minimum ad budget I need?",
     answer:
-      '$300–$1,000/month in ad spend is the minimum to generate consistent results. Below that, the algorithm doesn't have enough data to optimize. We'll discuss the right budget for your market during the strategy call.',
+      "$300–$1,000/month in ad spend is the minimum to generate consistent results. Below that, the algorithm doesn't have enough data to optimize. We'll discuss the right budget for your market during the strategy call.",
   },
   {
     question: 'How does the 10% revenue share work?',
