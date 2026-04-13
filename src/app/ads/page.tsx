@@ -72,7 +72,7 @@ const faqs = [
       "Yes. You own the ad account. We manage it on your behalf. If you ever leave, the account and its history stays with you. We don't hold your data hostage.",
   },
   {
-    question: 'What if results aren't there after 90 days?',
+    question: "What if results aren't there after 90 days?",
     answer:
       "If results aren't showing within 90 days, I go hands-on with direct 1-on-1 coaching to diagnose what's not working. In almost every case where the system underperforms, the root cause is slow lead follow-up on the shop's end — that's what the CRM is designed to fix.",
   },
