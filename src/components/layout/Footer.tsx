@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Left */}
           <div className="flex flex-col gap-3">
             <Image
-              src="https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-13-cropped.svg"
+              src="/logo.svg"
               alt="DetailPro Logo"
               width={140}
               height={35}
