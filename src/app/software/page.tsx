@@ -50,30 +50,96 @@ export default function SoftwarePage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="relative bg-[#050119] overflow-hidden pt-28 pb-20 px-4">
-          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-[#5e25fa]/8 rounded-full blur-[160px] pointer-events-none" />
-          <div className="max-w-4xl mx-auto text-center relative">
-            <span className="inline-block bg-[#5e25fa]/15 border border-[#5e25fa]/30 text-[#a78bfa] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
-              CRM Software for Auto Detailers
-            </span>
-            <h1 className="text-5xl md:text-7xl font-black text-[#e7e6ee] mb-6 leading-[1.05] tracking-tight">
-              Built for shops
-              <br />
-              that run on systems,
-              <br />
-              <span className="text-[#5e25fa]">not luck.</span>
-            </h1>
-            <p className="text-[#a3a3a3] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-              DetailPro CRM manages your consumer pipeline, fleet accounts, and speed-to-lead automation in one place — so jobs close while you're under a car.
-            </p>
-            <Link
-              href="https://www.detailprocrm.com/pricing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] text-lg"
-            >
-              Start Your 7-Day Free Trial
-            </Link>
+        <section className="relative bg-[#050119] overflow-hidden pt-24 pb-0 px-4">
+          {/* Glows */}
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#5e25fa]/10 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-[#280aa5]/8 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto relative">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_600px] gap-12 xl:gap-20 items-end">
+
+              {/* ── Left: text ── */}
+              <div className="pb-20">
+                <span className="inline-block bg-[#5e25fa]/15 border border-[#5e25fa]/30 text-[#a78bfa] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
+                  CRM Software for Auto Detailers
+                </span>
+                <h1 className="text-5xl md:text-6xl xl:text-[68px] font-black text-[#e7e6ee] mb-6 leading-[1.05] tracking-tight">
+                  Built for shops
+                  <br />
+                  that run on
+                  <br />
+                  <span className="text-[#5e25fa]">systems.</span>
+                </h1>
+                <p className="text-[#a3a3a3] text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                  Consumer pipeline, fleet accounts, and speed-to-lead automation — in one dashboard built for how detailing actually works.
+                </p>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
+                  <Link
+                    href="https://www.detailprocrm.com/pricing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-9 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] text-base"
+                  >
+                    Start Your 7-Day Free Trial
+                  </Link>
+                  <CalendlyButton className="inline-flex items-center gap-2 border border-white/15 hover:border-[#5e25fa]/40 text-[#e7e6ee] font-semibold px-9 py-4 rounded-full text-base transition-all hover:bg-white/5">
+                    Book a Demo
+                  </CalendlyButton>
+                </div>
+
+                {/* Trust row */}
+                <div className="flex flex-wrap gap-x-6 gap-y-2">
+                  {['7-day free trial', 'No setup fee', 'Cancel anytime'].map((t) => (
+                    <div key={t} className="flex items-center gap-2 text-[#a3a3a3] text-sm">
+                      <svg className="w-3.5 h-3.5 text-[#5e25fa]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {t}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* ── Right: stacked screenshots ── */}
+              <div className="relative hidden lg:block h-[540px]">
+                {/* Bottom card — consumer pipeline, offset back */}
+                <div className="absolute bottom-0 right-0 w-[92%] rounded-xl overflow-hidden border border-white/8 shadow-2xl shadow-black/70"
+                  style={{ transform: 'perspective(1200px) rotateY(-4deg) rotateX(2deg) translateY(40px)', transformOrigin: 'right bottom' }}>
+                  <Image
+                    src="/images/crm-consumer-pipeline.png"
+                    alt="DetailPro consumer pipeline"
+                    width={1200}
+                    height={750}
+                    className="w-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050119]/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                {/* Top card — dashboard, foreground */}
+                <div className="absolute top-0 left-0 w-[90%] rounded-xl overflow-hidden border border-[#5e25fa]/30 shadow-[0_0_60px_rgba(94,37,250,0.2)] shadow-black/60"
+                  style={{ transform: 'perspective(1200px) rotateY(-4deg) rotateX(2deg)', transformOrigin: 'left top' }}>
+                  <Image
+                    src="/images/crm-dashboard.png"
+                    alt="DetailPro CRM dashboard"
+                    width={1200}
+                    height={750}
+                    className="w-full"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#050119]/40 pointer-events-none" />
+                </div>
+
+                {/* Floating stat badge */}
+                <div className="absolute bottom-12 -left-4 bg-[#0d0630]/90 backdrop-blur-sm border border-[#5e25fa]/30 rounded-2xl px-4 py-3 shadow-xl z-10">
+                  <p className="text-[#a78bfa] text-xs font-semibold uppercase tracking-widest mb-1">Speed to lead</p>
+                  <p className="text-[#e7e6ee] text-2xl font-black">&lt; 30s</p>
+                  <p className="text-[#a3a3a3] text-xs">automated first response</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </section>
 
