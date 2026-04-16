@@ -18,16 +18,19 @@ const results = [
     stat: '14x',
     label: 'return on ad spend',
     detail: '$2,500 ad budget → $35,000 in ceramic bookings over 60 days',
+    context: 'Single-operator ceramic specialist, mid-size market, Meta campaigns.',
   },
   {
     stat: '$6k → $25k',
     label: 'monthly revenue growth',
     detail: 'Mobile detailer scaled from $6k to $25k/mo in 4 months with Meta ads',
+    context: 'Mobile detailer with no prior ad spend. Fully booked within 90 days.',
   },
   {
     stat: '$3',
-    label: 'cost per RV detail lead',
+    label: 'cost per qualified lead',
     detail: 'Mobile detailer targeting RV owners — $3 per qualified lead from Facebook',
+    context: 'Niche service targeting RV parks. Expanded to two new counties within 60 days.',
   },
 ];
 
@@ -41,8 +44,8 @@ const included = [
     desc: 'Capture customers searching for detailing services right now — "ceramic coating near me," "auto detailing [city]." High intent, immediate results.',
   },
   {
-    title: 'DetailPro CRM — lifetime access',
-    desc: 'The $197/mo subscription is included at no extra cost. Your ads drive leads; the CRM catches and converts them.',
+    title: 'DetailPro CRM — included free',
+    desc: 'The $197/mo subscription is included at no extra cost. Your ads drive leads; the CRM catches and converts them before a competitor does.',
   },
   {
     title: '3 strategy coaching calls',
@@ -84,27 +87,74 @@ export default function AdsPage() {
       <AnnouncementBar />
       <Navbar />
       <main>
-        {/* Hero */}
+
+        {/* ── Hero ── */}
         <section className="relative bg-[#050119] overflow-hidden pt-24 pb-20 px-4">
-          <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#5e25fa]/10 rounded-full blur-[140px] pointer-events-none" />
-          <div className="max-w-4xl mx-auto text-center relative">
-            <span className="inline-block bg-[#5e25fa]/15 border border-[#5e25fa]/30 text-[#a78bfa] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-              Ads Management · $2,397 setup + 10% rev share
-            </span>
-            <h1 className="text-4xl md:text-6xl font-black text-[#e7e6ee] mb-6 leading-tight">
-              Done-for-you ads that<br className="hidden md:block" /> fill your calendar.
-            </h1>
-            <p className="text-[#a3a3a3] text-lg md:text-xl max-w-2xl mx-auto mb-4">
-              Meta + Google campaigns managed for your shop. We only win when you win — our fee scales with your revenue, not against it.
-            </p>
-            <p className="text-[#a78bfa] font-semibold text-sm mb-10">$2,500 budget → 14x return. $6k/mo → $25k/mo in 4 months.</p>
-            <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold px-10 py-4 rounded-full transition-colors text-lg">
-              Book a Strategy Call
-            </CalendlyButton>
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#5e25fa]/10 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-[#280aa5]/8 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+              {/* Left: text */}
+              <div>
+                <span className="inline-block bg-[#5e25fa]/15 border border-[#5e25fa]/30 text-[#a78bfa] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
+                  Done-for-you ads management
+                </span>
+                <h1 className="text-5xl md:text-6xl xl:text-[68px] font-black text-[#e7e6ee] mb-6 leading-[1.05] tracking-tight">
+                  Stop relying
+                  <br />
+                  on word of
+                  <br />
+                  <span className="text-[#5e25fa]">mouth.</span>
+                </h1>
+                <p className="text-[#a3a3a3] text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                  Meta + Google campaigns managed for your shop. We only win when you win — our fee scales with your revenue, not against it.
+                </p>
+                <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
+                  <CalendlyButton className="inline-block bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-9 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] text-base">
+                    Book a Strategy Call
+                  </CalendlyButton>
+                  <a
+                    href="#audit"
+                    className="inline-flex items-center gap-2 border border-white/15 hover:border-[#5e25fa]/40 text-[#e7e6ee] font-semibold px-9 py-4 rounded-full text-base transition-all hover:bg-white/5"
+                  >
+                    Get a free review first
+                  </a>
+                </div>
+                <div className="flex flex-wrap gap-x-6 gap-y-2">
+                  {['No flat retainer', 'You own your ad account', 'CRM included free'].map((t) => (
+                    <div key={t} className="flex items-center gap-2 text-[#a3a3a3] text-sm">
+                      <svg className="w-3.5 h-3.5 text-[#5e25fa]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {t}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: results stats */}
+              <div className="flex flex-col gap-4">
+                {results.map((r) => (
+                  <div key={r.stat} className="bg-gradient-to-br from-[#5e25fa]/10 to-[#280aa5]/5 border border-[#5e25fa]/20 rounded-2xl p-6 flex items-start gap-6">
+                    <div className="shrink-0 text-center min-w-[72px]">
+                      <p className="text-3xl font-black text-[#a78bfa] leading-none mb-1">{r.stat}</p>
+                      <p className="text-[#a3a3a3] text-xs">{r.label}</p>
+                    </div>
+                    <div className="border-l border-white/10 pl-6">
+                      <p className="text-[#e7e6ee] text-sm font-semibold mb-1">{r.detail}</p>
+                      <p className="text-[#a3a3a3] text-xs leading-relaxed">{r.context}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
           </div>
         </section>
 
-        {/* Pain */}
+        {/* ── Pain ── */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-12">
@@ -112,8 +162,8 @@ export default function AdsPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: "Word of mouth dries up in winter", desc: "Referrals slow when weather changes. If you don't have a paid channel, slow months are out of your control." },
-                { title: "Competitors are outspending you", desc: "The shops in your market running ads are getting calls you'll never know about. Every day you're not advertising is a day they're growing." },
+                { title: 'Word of mouth dries up in winter', desc: "Referrals slow when weather changes. If you don't have a paid channel, slow months are out of your control." },
+                { title: 'Competitors are outspending you', desc: "The shops in your market running ads are getting calls you'll never know about. Every day you're not advertising is a day they're growing." },
                 { title: "Generic agencies don't get detailing", desc: "They track \"leads\" but don't understand ceramic pricing. They optimize for volume, not bookings. They charge $1,500/mo whether you grow or not." },
                 { title: "You don't know what a customer costs", desc: "Without data, you can't make smart growth decisions. Ads give you exact cost-per-lead, cost-per-booking, and real ROI numbers." },
               ].map((p) => (
@@ -131,25 +181,8 @@ export default function AdsPage() {
           </div>
         </section>
 
-        {/* Results */}
+        {/* ── What's included ── */}
         <section className="py-20 px-4 bg-white/2 border-y border-white/6">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">Real results</p>
-            <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-12">Numbers from actual shops</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {results.map((r) => (
-                <div key={r.stat} className="bg-gradient-to-br from-[#5e25fa]/15 to-[#280aa5]/8 border border-[#5e25fa]/25 rounded-2xl p-6 text-center">
-                  <p className="text-4xl font-black text-[#a78bfa] mb-2">{r.stat}</p>
-                  <p className="text-[#e7e6ee] font-semibold text-sm mb-3">{r.label}</p>
-                  <p className="text-[#a3a3a3] text-xs leading-relaxed">{r.detail}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* What's included */}
-        <section className="py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">What you get</p>
             <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-12">Everything included. No a la carte.</h2>
@@ -164,7 +197,7 @@ export default function AdsPage() {
           </div>
         </section>
 
-        {/* Pricing + rev share explanation */}
+        {/* ── Pricing ── */}
         <section className="py-20 px-4 bg-[#050119]">
           <div className="max-w-3xl mx-auto">
             <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">Pricing</p>
@@ -192,15 +225,8 @@ export default function AdsPage() {
           </div>
         </section>
 
-        {/* Audit form */}
+        {/* ── FAQ ── */}
         <section className="py-20 px-4">
-          <div className="max-w-3xl mx-auto">
-            <AuditRequestForm source="ads_page_audit" context="ads-page" />
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-20 px-4 bg-[#050119]">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-10">Common questions</h2>
             <div className="flex flex-col gap-3">
@@ -211,20 +237,43 @@ export default function AdsPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 px-4">
+        {/* ── Primary CTA ── */}
+        <section className="py-24 px-4 bg-[#050119]">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-black text-[#e7e6ee] mb-4">
-              Ready to stop relying on word of mouth?
+            <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">Ready to scale past word of mouth?</p>
+            <h2 className="text-4xl md:text-5xl font-black text-[#e7e6ee] mb-4 leading-tight">
+              Book a free
+              <br />strategy call.
             </h2>
-            <p className="text-[#a3a3a3] mb-8">
-              Book a strategy call. We'll look at your market, your current setup, and build a plan.
+            <p className="text-[#a3a3a3] mb-10 max-w-xl mx-auto">
+              We'll look at your market, your current revenue, and build a realistic plan. No pitch — just an honest conversation about whether ads make sense for your shop right now.
             </p>
-            <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold px-10 py-4 rounded-full transition-colors text-lg">
+            <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-12 py-5 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.5)] text-lg mb-5">
               Book My Strategy Call
             </CalendlyButton>
+            <p className="text-[#a3a3a3] text-sm">
+              Not ready for a call?{' '}
+              <a href="#audit" className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee] transition-colors">
+                Request a free review instead →
+              </a>
+            </p>
           </div>
         </section>
+
+        {/* ── Audit form (fallback lead capture) ── */}
+        <section id="audit" className="py-20 px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">Not ready for a call?</p>
+              <h2 className="text-3xl font-bold text-[#e7e6ee] mb-3">Not sure if ads are right for your shop?</h2>
+              <p className="text-[#a3a3a3] max-w-xl mx-auto">
+                Drop your info below. We'll review your market, your current setup, and send you an honest take on whether paid ads make sense for you right now.
+              </p>
+            </div>
+            <AuditRequestForm source="ads_page_audit" context="ads-page" />
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
