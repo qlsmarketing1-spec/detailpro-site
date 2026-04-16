@@ -22,11 +22,11 @@ export default function AuditRequestForm({
   const headline =
     context === 'ads-page'
       ? 'Not sure if ads are right for you?'
-      : 'Get a free personalized video audit of your business';
+      : "Let's take a look at your setup";
   const subhead =
     context === 'ads-page'
       ? "Drop your info and I'll record a personal Loom video reviewing your shop, your market, and whether ads make sense for you right now."
-      : "I'll pull up your website, Instagram, and Google Business Profile and record a personal Loom video walking through exactly what's broken and what to fix first.";
+      : "Share your info and we'll review what you've got. If there's a clear opportunity, we'll reach out directly.";
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -53,9 +53,9 @@ export default function AuditRequestForm({
             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-[#e7e6ee] mb-2">Your audit is coming.</h3>
+        <h3 className="text-xl font-bold text-[#e7e6ee] mb-2">Got it — we'll be in touch.</h3>
         <p className="text-[#a3a3a3] text-sm">
-          Check the email you provided — you'll receive a personal Loom video within 24 hours walking through your specific situation and exactly what to fix first.
+          We'll take a look at your website and reach out personally within a day or two.
         </p>
       </div>
     );
@@ -106,7 +106,7 @@ export default function AuditRequestForm({
           disabled={formState === 'loading'}
           className="w-full bg-[#5e25fa] hover:bg-[#4d1fe0] disabled:opacity-60 text-white font-semibold py-3 rounded-full transition-colors mt-1"
         >
-          {formState === 'loading' ? 'Sending...' : context === 'ads-page' ? 'Request My Free Ads Review' : 'Get My Free Video Audit'}
+          {formState === 'loading' ? 'Sending...' : context === 'ads-page' ? 'Request My Free Ads Review' : 'Send My Info'}
         </button>
         <FormStatus state={formState} />
         <p className="text-[#a3a3a3] text-xs text-center">Free. No pitch, no pressure — just a real look at your business.</p>
