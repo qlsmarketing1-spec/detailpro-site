@@ -77,58 +77,6 @@ export default function SoftwarePage() {
           </div>
         </section>
 
-        {/* ── Who it's for / not for ── */}
-        <section className="py-20 px-4 bg-[#050119] border-b border-white/6">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-12">Know before you book</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-              {/* For */}
-              <div className="bg-[#5e25fa]/8 border border-[#5e25fa]/25 rounded-3xl p-8">
-                <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-5">This is built for you if</p>
-                <ul className="space-y-4">
-                  {[
-                    "You're running $5k–$30k/mo and leads are falling through the cracks",
-                    "You manage jobs through texts and a notes app and it's costing you bookings",
-                    "You want to land fleet accounts — dealerships, rental companies, corporate fleets",
-                    "You're ready to stop being the bottleneck in your own business",
-                    "You have a team or are building toward one",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-[#e7e6ee] leading-relaxed">
-                      <svg className="w-4 h-4 text-[#5e25fa] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Not for */}
-              <div className="bg-white/3 border border-white/8 rounded-3xl p-8">
-                <p className="text-[#a3a3a3] text-xs font-bold uppercase tracking-widest mb-5">This is not for you if</p>
-                <ul className="space-y-4">
-                  {[
-                    "You're detailing on weekends and have no intention of scaling",
-                    "You're under $3k/mo and still figuring out your service menu",
-                    "You want a tool that manages everything for you with zero involvement",
-                    "You won't follow up on leads — the CRM gives you speed, but you close",
-                    "You're not willing to spend $300–$1k/mo on ads to fuel the pipeline",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-[#a3a3a3] leading-relaxed">
-                      <svg className="w-4 h-4 text-red-500/60 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
         {/* ── Software screenshots ── */}
         <section className="py-24 px-4">
           <div className="max-w-6xl mx-auto">
@@ -259,6 +207,58 @@ export default function SoftwarePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050119]/40 to-transparent pointer-events-none" />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Who it's for / not for ── */}
+        <section className="py-20 px-4 bg-[#050119] border-b border-white/6">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-12">Know before you book</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* For */}
+              <div className="bg-[#5e25fa]/8 border border-[#5e25fa]/25 rounded-3xl p-8">
+                <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-5">This is built for you if</p>
+                <ul className="space-y-4">
+                  {[
+                    "You're running $5k–$30k/mo and leads are falling through the cracks",
+                    "You manage jobs through texts and a notes app and it's costing you bookings",
+                    "You want to land fleet accounts — dealerships, rental companies, corporate fleets",
+                    "You're ready to stop being the bottleneck in your own business",
+                    "You have a team or are building toward one",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#e7e6ee] leading-relaxed">
+                      <svg className="w-4 h-4 text-[#5e25fa] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Not for */}
+              <div className="bg-white/3 border border-white/8 rounded-3xl p-8">
+                <p className="text-[#a3a3a3] text-xs font-bold uppercase tracking-widest mb-5">This is not for you if</p>
+                <ul className="space-y-4">
+                  {[
+                    "You're detailing on weekends and have no intention of scaling",
+                    "You're under $3k/mo and still figuring out your service menu",
+                    "You want a tool that manages everything for you with zero involvement",
+                    "You won't follow up on leads — the CRM gives you speed, but you close",
+                    "You're not willing to spend $300–$1k/mo on ads to fuel the pipeline",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#a3a3a3] leading-relaxed">
+                      <svg className="w-4 h-4 text-red-500/60 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
             </div>
           </div>
         </section>
