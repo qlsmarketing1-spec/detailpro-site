@@ -100,14 +100,14 @@ export default function SoftwarePage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-base">
-                Book a Free Demo
+                Book a Free CRM Demo
               </CalendlyButton>
             </div>
             <div className="max-w-md mx-auto">
               <MiniLeadForm
                 source="software_hero"
                 headline="Or get a 2-minute dashboard walkthrough →"
-                buttonText="Send It"
+                buttonText="Send the Walkthrough"
                 successMessage="Check your inbox — walkthrough is on its way."
               />
             </div>
@@ -200,7 +200,7 @@ export default function SoftwarePage() {
                 ))}
               </ul>
               <CalendlyButton className="w-full bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold py-3.5 rounded-full transition-colors">
-                Start Your Demo
+                Book a Free CRM Demo
               </CalendlyButton>
               <p className="text-center text-[#a3a3a3] text-xs mt-3">
                 Compare: Jobber starts at $69/mo with no automation. HCP at $129/mo with outage risk.
@@ -228,16 +228,16 @@ export default function SoftwarePage() {
               Ready to stop losing leads?
             </h2>
             <p className="text-[#a3a3a3] mb-8">
-              Book a free demo and see the full dashboard in under 30 minutes.
+              Book a free CRM demo — see the full dashboard, pipelines, and automations in under 30 minutes.
             </p>
             <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold px-10 py-4 rounded-full transition-colors text-lg mb-6">
-              Book A Demo
+              Book a Free CRM Demo
             </CalendlyButton>
             <div className="max-w-md mx-auto">
               <MiniLeadForm
                 source="software_final_cta"
-                headline="Not ready to talk? Get the walkthrough instead →"
-                buttonText="Send It"
+                headline="Not ready to talk? Get the 2-minute dashboard walkthrough instead →"
+                buttonText="Send the Walkthrough"
               />
             </div>
           </div>

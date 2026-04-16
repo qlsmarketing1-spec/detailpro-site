@@ -212,8 +212,8 @@ export default function WebsitePage() {
             <p className="text-[#a3a3a3] text-sm mb-8">Drop your email and we'll send you 3–5 examples of sites we've built for other detailers.</p>
             <MiniLeadForm
               source="website_examples"
-              headline=""
-              buttonText="Send Me Examples"
+              headline="Drop your email and we'll send you 3–5 real builds →"
+              buttonText="Send Me the Examples"
               successMessage="Examples are on the way. Check your inbox."
             />
           </div>

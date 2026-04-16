@@ -106,7 +106,7 @@ export default function AuditRequestForm({
           disabled={formState === 'loading'}
           className="w-full bg-[#5e25fa] hover:bg-[#4d1fe0] disabled:opacity-60 text-white font-semibold py-3 rounded-full transition-colors mt-1"
         >
-          {formState === 'loading' ? 'Sending...' : 'Get My Free Audit'}
+          {formState === 'loading' ? 'Sending...' : context === 'ads-page' ? 'Request My Free Ads Review' : 'Get My Free Video Audit'}
         </button>
         <FormStatus state={formState} />
         <p className="text-[#a3a3a3] text-xs text-center">Free. No pitch, no pressure — just a real look at your business.</p>

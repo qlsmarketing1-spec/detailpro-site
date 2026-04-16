@@ -55,7 +55,7 @@ export default function GuaranteeSection() {
             </div>
 
             <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-bold px-10 py-5 rounded-full text-xl transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.5)]">
-              Book My Free Demo
+              Book a Free Strategy Call
             </CalendlyButton>
           </div>
         </div>

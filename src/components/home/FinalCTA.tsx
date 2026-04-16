@@ -38,19 +38,17 @@ export default function FinalCTA() {
 
         {/* CTA */}
         <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-black px-12 py-6 rounded-full text-xl transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(94,37,250,0.5)] mb-4">
-          Book A Demo Now
+          Book a Free Strategy Call
         </CalendlyButton>
 
         {/* Self-serve escape valve */}
         <p className="text-[#a3a3a3] text-sm mb-10">
-          Prefer to skip the call?{' '}
+          Not ready for ads yet?{' '}
           <a
-            href="https://www.detailprocrm.com/pricing"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/software"
             className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee] transition-colors"
           >
-            Buy now →
+            Start with the CRM →
           </a>
         </p>
 

@@ -33,7 +33,7 @@ export default function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-bold px-9 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] active:scale-95">
-              Book My Free Demo
+              Book a Free Strategy Call
             </CalendlyButton>
             <a
               href="#how-it-works"
