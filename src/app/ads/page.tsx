@@ -48,8 +48,8 @@ const included = [
     desc: 'The $197/mo subscription is included at no extra cost. Your ads drive leads; the CRM catches and converts them before a competitor does.',
   },
   {
-    title: '3 strategy coaching calls',
-    desc: 'Beyond the ads — pricing strategy, service menu optimization, hiring, operations. Real conversations about growing your business.',
+    title: 'A real growth partner — not a vendor',
+    desc: "We're in your corner beyond the ad account. That means helping you think through offer positioning, pricing, and what to do with the leads once they come in. We don't disappear after setup.",
   },
 ];
 
@@ -216,11 +216,25 @@ export default function AdsPage() {
                 No flat monthly retainer. No paying us when you're slow. When you make more, we make more. When it's a slow month, your payment drops automatically.
               </p>
             </div>
-            <div className="bg-[#5e25fa]/8 border border-[#5e25fa]/20 rounded-2xl p-6">
-              <h3 className="font-bold text-[#e7e6ee] mb-2">Why rev share instead of a flat retainer?</h3>
-              <p className="text-[#a3a3a3] text-sm leading-relaxed">
-                Flat-retainer agencies charge $1,500–3,000/month whether your calendar is full or empty. They optimize for impressions and click volume — metrics that look good in reports but don't pay your bills. The rev share model means we're structurally incentivized to produce revenue, not activity. If the ads aren't making you money, we aren't either.
-              </p>
+            <div className="bg-[#5e25fa]/8 border border-[#5e25fa]/20 rounded-3xl p-8 space-y-6">
+              <div>
+                <h3 className="font-bold text-[#e7e6ee] mb-2">Why rev share instead of a flat retainer?</h3>
+                <p className="text-[#a3a3a3] text-sm leading-relaxed">
+                  Flat-retainer agencies charge $1,500–3,000/month whether your calendar is full or empty. They optimize for impressions and click volume — metrics that look good in reports but don't pay your bills. When your slow month is their guaranteed check, there's no pressure to fix it.
+                </p>
+              </div>
+              <div className="border-t border-white/8 pt-6">
+                <h3 className="font-bold text-[#e7e6ee] mb-2">Our incentive is your growth — structurally.</h3>
+                <p className="text-[#a3a3a3] text-sm leading-relaxed">
+                  At 10% of managed revenue, we make more when you make more. A shop doing $10k/mo is a $1k month for us. A shop doing $40k/mo is a $4k month. That math means we're motivated to help you hit $40k — not to keep you comfortable at $10k. We're not trying to retain a client. We're trying to build a detailing operation that doesn't need us to babysit it.
+                </p>
+              </div>
+              <div className="border-t border-white/8 pt-6">
+                <h3 className="font-bold text-[#e7e6ee] mb-2">We treat your business like a partner would.</h3>
+                <p className="text-[#a3a3a3] text-sm leading-relaxed">
+                  That means being honest when a market isn't ready for ads. It means telling you when your pricing is leaving money on the table. It means the CRM is included — not upsold — because leads that don't get followed up on are wasted ad spend, and wasted ad spend hurts both of us. If you're not growing, we're not either.
+                </p>
+              </div>
             </div>
           </div>
         </section>
