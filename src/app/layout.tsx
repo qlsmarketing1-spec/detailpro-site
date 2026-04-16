@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Sans, Newsreader } from 'next/font/google';
 import Script from 'next/script';
+import AnalyticsListeners from '@/components/shared/AnalyticsListeners';
 import '@/styles/globals.css';
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -104,6 +105,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#050119] text-[#e7e6ee] antialiased overflow-x-hidden selection:bg-[#5e25fa] selection:text-[#e7e6ee] font-sans">
         {children}
+        <AnalyticsListeners />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JSBR62E0WZ"
           strategy="afterInteractive"

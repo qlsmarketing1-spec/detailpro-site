@@ -7,9 +7,17 @@ interface CalendlyButtonProps {
 }
 
 export default function CalendlyButton({ children, className }: CalendlyButtonProps) {
+  function handleClick(e: React.MouseEvent) {
+    e.preventDefault();
+    openCalendly();
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'calendly_open');
+    }
+  }
+
   return (
     <button
-      onClick={(e) => { e.preventDefault(); openCalendly(); }}
+      onClick={handleClick}
       className={className}
     >
       {children}
