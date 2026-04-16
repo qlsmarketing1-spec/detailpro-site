@@ -1,81 +1,44 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import CalendlyButton from '@/components/ui/CalendlyButton';
 import FAQItem from '@/components/ui/FAQItem';
-import MiniLeadForm from '@/components/forms/MiniLeadForm';
 
 export const metadata: Metadata = {
   title: 'CRM Software for Auto Detailers — DetailPro',
   description:
-    'Stop losing leads in your texts. DetailPro CRM automates speed-to-lead follow-up, manages detailing pipelines, and grows fleet accounts — $197/mo.',
+    'DetailPro CRM is built for detailing operations — speed-to-lead SMS, consumer and fleet pipelines, automated review requests. Not for weekend warriors. $197/mo.',
   alternates: { canonical: 'https://www.detailpro.tech/software' },
 };
-
-const features = [
-  {
-    title: 'Speed-to-lead SMS',
-    desc: 'An automated text fires within 30 seconds of a new inquiry — before a competitor even picks up the phone. One touchpoint that stops the bleeding.',
-  },
-  {
-    title: 'Detailing pipelines',
-    desc: 'Consumer jobs, ceramic coatings, PPF, and maintenance — tracked separately with their own boards. Not a generic "lead → closed" funnel.',
-  },
-  {
-    title: 'Fleet account pipeline',
-    desc: 'A dedicated system for prospecting, nurturing, and landing commercial fleet accounts. The most predictable revenue in the detailing business.',
-  },
-  {
-    title: 'Automated review requests',
-    desc: 'Every completed job triggers a Google review request. Detailers who ask consistently rank higher. Nobody remembers to ask manually.',
-  },
-];
-
-const painPoints = [
-  {
-    title: 'Jobber quotes go to spam',
-    desc: "Estimates sent from jobbermail.com hit the junk folder. Over 60% of quotes are never opened. You're sending proposals into a black hole.",
-  },
-  {
-    title: 'HCP outages and billing fights',
-    desc: "VoIP outages lasting 30+ days. Held funds. Billing practices operators call predatory. That's your business running on someone else's reliability.",
-  },
-  {
-    title: 'Leads lost in DMs and texts',
-    desc: "Your personal phone is your CRM. Leads fall through when you're under a car. You can't close jobs you've forgotten about.",
-  },
-  {
-    title: 'Generic CRMs charge for automation',
-    desc: "Most tools paywall follow-up sequences at $500+/month. They treat a $50 wash the same as a $2,000 ceramic coating. DetailPro doesn't.",
-  },
-];
 
 const faqs = [
   {
     question: 'How is this different from Jobber or Housecall Pro?',
     answer:
-      "Jobber and HCP are built for field service businesses broadly — plumbers, HVAC, landscaping. DetailPro is built specifically for detailing. That means pipelines that match how detailing actually works (ceramic coatings are not the same as a wash), fleet account tracking, and speed-to-lead automation designed for the 5-minute window that decides whether you get the booking.",
+      "Jobber and HCP are built for field service broadly — plumbers, HVAC, landscaping. DetailPro is built specifically for detailing. That means pipelines that match how detailing actually closes (ceramic coatings are not the same as a wash), a dedicated fleet account system, and speed-to-lead automation designed for the 5-minute window that decides whether you get the booking.",
   },
   {
     question: 'What does the speed-to-lead SMS actually send?',
     answer:
-      "One automated message that acknowledges the inquiry, shares basic pricing information, and pushes the customer toward booking. Due to messaging regulations, the automation is limited to this one initial response — you follow up personally from there. The value is in the speed: getting there in under 30 seconds before the customer texts your competitor.",
+      "An automated message that acknowledges the inquiry and pushes the customer toward booking — firing within 30 seconds. Due to messaging regulations, the automation handles this first touchpoint. You follow up personally from there. The value is getting there before they text your competitor.",
   },
   {
     question: 'Do I need a website to use the CRM?',
     answer:
-      "No. The CRM works with any existing website, Google Business Profile, or social media presence. If you don't have a website or want a better one, we build them separately for $597 one-time.",
+      "No. It works with any existing website, Google Business Profile, or social media presence. If you need a better site, we build those separately for $597 one-time.",
   },
   {
     question: 'Is there a contract or setup fee?',
     answer:
-      "$197/month, no contract, no setup fee. Cancel anytime. If you also sign up for ads management, the CRM subscription is bundled in at no extra cost.",
+      "$197/month. No contract, no setup fee. Cancel anytime. If you sign up for ads management, the CRM is bundled in at no extra cost.",
   },
   {
     question: 'What happens if I want to cancel?',
     answer:
-      "You can cancel anytime — no cancellation fees, no holdbacks. Your data remains accessible for 30 days after cancellation so you can export anything you need.",
+      "Cancel anytime — no fees, no holdbacks. Your data stays accessible for 30 days so you can export everything you need.",
   },
 ];
 
@@ -85,47 +48,255 @@ export default function SoftwarePage() {
       <AnnouncementBar />
       <Navbar />
       <main>
-        {/* Hero */}
-        <section className="relative bg-[#050119] overflow-hidden pt-24 pb-20 px-4">
-          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#5e25fa]/10 rounded-full blur-[140px] pointer-events-none" />
+
+        {/* ── Hero ── */}
+        <section className="relative bg-[#050119] overflow-hidden pt-28 pb-20 px-4">
+          <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-[#5e25fa]/8 rounded-full blur-[160px] pointer-events-none" />
           <div className="max-w-4xl mx-auto text-center relative">
-            <span className="inline-block bg-[#5e25fa]/15 border border-[#5e25fa]/30 text-[#a78bfa] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-              CRM Software · $197/mo
+            <span className="inline-block bg-[#5e25fa]/15 border border-[#5e25fa]/30 text-[#a78bfa] text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-8">
+              CRM Software for Auto Detailers
             </span>
-            <h1 className="text-4xl md:text-6xl font-black text-[#e7e6ee] mb-6 leading-tight">
-              Stop losing leads<br className="hidden md:block" /> in your texts.
+            <h1 className="text-5xl md:text-7xl font-black text-[#e7e6ee] mb-6 leading-[1.05] tracking-tight">
+              Built for shops
+              <br />
+              that run on systems,
+              <br />
+              <span className="text-[#5e25fa]">not luck.</span>
             </h1>
-            <p className="text-[#a3a3a3] text-lg md:text-xl max-w-2xl mx-auto mb-10">
-              DetailPro automates speed-to-lead follow-up, manages your detailing pipelines, and builds your fleet account base — all in one place.
+            <p className="text-[#a3a3a3] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+              DetailPro CRM manages your consumer pipeline, fleet accounts, and speed-to-lead automation in one place — so jobs close while you're under a car.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-              <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-base">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] text-lg">
                 Book a Free CRM Demo
               </CalendlyButton>
-            </div>
-            <div className="max-w-md mx-auto">
-              <MiniLeadForm
-                source="software_hero"
-                headline="Or get a 2-minute dashboard walkthrough →"
-                buttonText="Send the Walkthrough"
-                successMessage="Check your inbox — walkthrough is on its way."
-              />
+              <Link
+                href="https://www.detailprocrm.com/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#a3a3a3] hover:text-[#e7e6ee] text-sm font-medium underline underline-offset-4 transition-colors"
+              >
+                See pricing →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* Pain */}
-        <section className="py-20 px-4 bg-[#050119]">
+        {/* ── Who it's for / not for ── */}
+        <section className="py-20 px-4 bg-[#050119] border-b border-white/6">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-12">Know before you book</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* For */}
+              <div className="bg-[#5e25fa]/8 border border-[#5e25fa]/25 rounded-3xl p-8">
+                <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-5">This is built for you if</p>
+                <ul className="space-y-4">
+                  {[
+                    "You're running $5k–$30k/mo and leads are falling through the cracks",
+                    "You manage jobs through texts and a notes app and it's costing you bookings",
+                    "You want to land fleet accounts — dealerships, rental companies, corporate fleets",
+                    "You're ready to stop being the bottleneck in your own business",
+                    "You have a team or are building toward one",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#e7e6ee] leading-relaxed">
+                      <svg className="w-4 h-4 text-[#5e25fa] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Not for */}
+              <div className="bg-white/3 border border-white/8 rounded-3xl p-8">
+                <p className="text-[#a3a3a3] text-xs font-bold uppercase tracking-widest mb-5">This is not for you if</p>
+                <ul className="space-y-4">
+                  {[
+                    "You're detailing on weekends and have no intention of scaling",
+                    "You're under $3k/mo and still figuring out your service menu",
+                    "You want a tool that manages everything for you with zero involvement",
+                    "You won't follow up on leads — the CRM gives you speed, but you close",
+                    "You're not willing to spend $300–$1k/mo on ads to fuel the pipeline",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#a3a3a3] leading-relaxed">
+                      <svg className="w-4 h-4 text-red-500/60 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── Software screenshots ── */}
+        <section className="py-24 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">Inside the platform</p>
+              <h2 className="text-3xl md:text-5xl font-black text-[#e7e6ee]">Everything in one dashboard.</h2>
+            </div>
+
+            {/* Dashboard */}
+            <div className="mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 items-center">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60">
+                  <Image
+                    src="/images/crm-dashboard.png"
+                    alt="DetailPro CRM dashboard showing revenue, leads, and pipeline"
+                    width={1200}
+                    height={750}
+                    className="w-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050119]/40 to-transparent pointer-events-none" />
+                </div>
+                <div>
+                  <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-3">Dashboard</p>
+                  <h3 className="text-2xl md:text-3xl font-black text-[#e7e6ee] mb-4">Your whole business at a glance.</h3>
+                  <p className="text-[#a3a3a3] leading-relaxed mb-6">
+                    Active leads, monthly revenue, win rate, pipeline value — all live. Know exactly where you stand before you pick up the phone.
+                  </p>
+                  <ul className="space-y-2">
+                    {['Live pipeline value', 'Most requested services', 'Top fleet targets ranked by value/yr', "Today's tasks"].map((i) => (
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-[#e7e6ee]/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#5e25fa] shrink-0" />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Consumer Pipeline */}
+            <div className="mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-center">
+                <div className="order-2 lg:order-1">
+                  <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-3">Consumer Pipeline</p>
+                  <h3 className="text-2xl md:text-3xl font-black text-[#e7e6ee] mb-4">Every lead. Every stage. Nothing slips.</h3>
+                  <p className="text-[#a3a3a3] leading-relaxed mb-6">
+                    New leads, contacted, qualified, proposal sent — a kanban board designed for how detailing actually closes. Service, vehicle, value, and last contact date on every card.
+                  </p>
+                  <ul className="space-y-2">
+                    {['Consumer, ceramic, PPF, and maintenance tracked separately', 'Lead score visible on every card', 'Assign jobs to team members', 'One-click move between stages'].map((i) => (
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-[#e7e6ee]/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#5e25fa] shrink-0" />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60">
+                  <Image
+                    src="/images/crm-consumer-pipeline.png"
+                    alt="DetailPro CRM consumer pipeline kanban view"
+                    width={1200}
+                    height={750}
+                    className="w-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050119]/40 to-transparent pointer-events-none" />
+                </div>
+              </div>
+            </div>
+
+            {/* Fleet Pipeline */}
+            <div className="mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 items-center">
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60">
+                  <Image
+                    src="/images/crm-fleet-pipeline.png"
+                    alt="DetailPro CRM fleet and commercial pipeline"
+                    width={1200}
+                    height={750}
+                    className="w-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050119]/40 to-transparent pointer-events-none" />
+                </div>
+                <div>
+                  <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-3">Fleet / Commercial Pipeline</p>
+                  <h3 className="text-2xl md:text-3xl font-black text-[#e7e6ee] mb-4">The most predictable revenue in detailing.</h3>
+                  <p className="text-[#a3a3a3] leading-relaxed mb-6">
+                    Fleet accounts are what separates operators from detailers. This pipeline tracks deal stage, fleet size, profit margin, and annualized value for every commercial prospect.
+                  </p>
+                  <ul className="space-y-2">
+                    {['Value/yr calculated per account', 'Stage tracking from target to won', 'Profit and deal score on every row', 'Assign account owners to your team'].map((i) => (
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-[#e7e6ee]/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#5e25fa] shrink-0" />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Messages */}
+            <div>
+              <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-center">
+                <div className="order-2 lg:order-1">
+                  <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-3">Messages</p>
+                  <h3 className="text-2xl md:text-3xl font-black text-[#e7e6ee] mb-4">One inbox. Not 12 text threads.</h3>
+                  <p className="text-[#a3a3a3] leading-relaxed mb-6">
+                    Every lead conversation in one place. The speed-to-lead automation handles the first touchpoint — you pick it up from there with full context on who they are and where they are in the pipeline.
+                  </p>
+                  <ul className="space-y-2">
+                    {['Automated first response under 30 seconds', 'Full conversation history per contact', 'Consumer and fleet leads in one inbox', 'Link directly to pipeline record'].map((i) => (
+                      <li key={i} className="flex items-center gap-2.5 text-sm text-[#e7e6ee]/80">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#5e25fa] shrink-0" />
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/60">
+                  <Image
+                    src="/images/crm-messages.png"
+                    alt="DetailPro CRM messages and lead conversations"
+                    width={1200}
+                    height={750}
+                    className="w-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050119]/40 to-transparent pointer-events-none" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Why they switch ── */}
+        <section className="py-20 px-4 bg-[#050119] border-y border-white/6">
           <div className="max-w-5xl mx-auto">
             <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">Why detailers switch</p>
             <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-12">
               Your current tools are costing you jobs
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {painPoints.map((p) => (
+              {[
+                {
+                  title: 'Jobber quotes go to spam',
+                  desc: "Estimates sent from jobbermail.com hit the junk folder. Over 60% of quotes are never opened. You're sending proposals into a black hole.",
+                },
+                {
+                  title: 'HCP outages and billing fights',
+                  desc: "VoIP outages lasting 30+ days. Held funds. Billing practices operators call predatory. Your business running on someone else's reliability.",
+                },
+                {
+                  title: 'Leads lost in DMs and texts',
+                  desc: "Your personal phone is your CRM. Leads fall through when you're under a car. You can't close jobs you've forgotten about.",
+                },
+                {
+                  title: 'Generic CRMs paywall automation',
+                  desc: "Most tools lock follow-up sequences behind $500+/month plans. They treat a $50 wash the same as a $2,000 ceramic coating. DetailPro doesn't.",
+                },
+              ].map((p) => (
                 <div key={p.title} className="bg-white/3 border border-white/8 rounded-2xl p-6">
                   <div className="flex items-start gap-3">
-                    <div className="w-1.5 h-full min-h-[40px] bg-red-500/60 rounded-full shrink-0 mt-1" />
+                    <div className="w-1.5 min-h-[40px] bg-red-500/60 rounded-full shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold text-[#e7e6ee] mb-1">{p.title}</h3>
                       <p className="text-[#a3a3a3] text-sm leading-relaxed">{p.desc}</p>
@@ -137,26 +308,8 @@ export default function SoftwarePage() {
           </div>
         </section>
 
-        {/* Features */}
+        {/* ── Social proof numbers ── */}
         <section className="py-20 px-4">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">What's included</p>
-            <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-12">
-              Built for how detailing actually works
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {features.map((f) => (
-                <div key={f.title} className="bg-gradient-to-br from-[#5e25fa]/10 to-[#280aa5]/5 border border-[#5e25fa]/20 rounded-2xl p-6">
-                  <h3 className="font-bold text-[#e7e6ee] mb-2">{f.title}</h3>
-                  <p className="text-[#a3a3a3] text-sm leading-relaxed">{f.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Social proof */}
-        <section className="py-16 px-4 bg-white/2 border-y border-white/6">
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <p className="text-4xl font-black text-[#a78bfa] mb-2">$5k → $22k</p>
@@ -167,50 +320,31 @@ export default function SoftwarePage() {
               <p className="text-[#a3a3a3] text-sm">speed-to-lead response time</p>
             </div>
             <div>
-              <p className="text-4xl font-black text-[#a78bfa] mb-2">Fleet added</p>
-              <p className="text-[#a3a3a3] text-sm">first commercial account in 30 days</p>
+              <p className="text-4xl font-black text-[#a78bfa] mb-2">30 days</p>
+              <p className="text-[#a3a3a3] text-sm">to first fleet account closed</p>
             </div>
           </div>
         </section>
 
-        {/* Pricing */}
+        {/* ── Pricing nudge ── */}
+        <section className="py-16 px-4 bg-[#050119]">
+          <div className="max-w-lg mx-auto text-center">
+            <p className="text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-6">Pricing</p>
+            <p className="text-[#e7e6ee] text-lg font-semibold mb-2">$197/month. No setup fee. No contract.</p>
+            <p className="text-[#a3a3a3] text-sm mb-6">Cancel anytime. Bundled free if you're on ads management.</p>
+            <Link
+              href="https://www.detailprocrm.com/pricing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-white/15 hover:border-[#5e25fa]/50 text-[#e7e6ee] font-semibold px-8 py-3 rounded-full text-sm transition-all hover:bg-white/5"
+            >
+              See full pricing and plan details →
+            </Link>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
         <section className="py-20 px-4">
-          <div className="max-w-lg mx-auto">
-            <p className="text-center text-[#a3a3a3] text-xs uppercase tracking-[0.25em] mb-4">Simple pricing</p>
-            <div className="bg-white/4 border border-white/10 rounded-3xl p-8">
-              <div className="text-center mb-6">
-                <p className="text-5xl font-black text-[#e7e6ee]">$197</p>
-                <p className="text-[#a3a3a3] text-sm mt-1">per month · cancel anytime</p>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {[
-                  'Speed-to-lead SMS (30-second response)',
-                  'Consumer + ceramic + fleet pipelines',
-                  'Automated review requests',
-                  'Unified dashboard',
-                  'No setup fee',
-                  'No contract',
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-[#e7e6ee]">
-                    <svg className="h-4 w-4 text-[#5e25fa] shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <CalendlyButton className="w-full bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold py-3.5 rounded-full transition-colors">
-                Book a Free CRM Demo
-              </CalendlyButton>
-              <p className="text-center text-[#a3a3a3] text-xs mt-3">
-                Compare: Jobber starts at $69/mo with no automation. HCP at $129/mo with outage risk.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-20 px-4 bg-[#050119]">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-[#e7e6ee] text-center mb-10">Common questions</h2>
             <div className="flex flex-col gap-3">
@@ -221,27 +355,34 @@ export default function SoftwarePage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 px-4">
+        {/* ── Final CTA ── */}
+        <section className="py-24 px-4 bg-[#050119]">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-black text-[#e7e6ee] mb-4">
-              Ready to stop losing leads?
+            <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">Ready to run a real operation?</p>
+            <h2 className="text-4xl md:text-5xl font-black text-[#e7e6ee] mb-4 leading-tight">
+              See exactly what the CRM
+              <br />does for your shop.
             </h2>
-            <p className="text-[#a3a3a3] mb-8">
-              Book a free CRM demo — see the full dashboard, pipelines, and automations in under 30 minutes.
+            <p className="text-[#a3a3a3] mb-10 max-w-xl mx-auto">
+              Book a free demo. We'll walk through the full platform, show you how the pipelines are set up, and tell you honestly if it's the right fit.
             </p>
-            <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-semibold px-10 py-4 rounded-full transition-colors text-lg mb-6">
+            <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-12 py-5 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.5)] text-lg mb-5">
               Book a Free CRM Demo
             </CalendlyButton>
-            <div className="max-w-md mx-auto">
-              <MiniLeadForm
-                source="software_final_cta"
-                headline="Not ready to talk? Get the 2-minute dashboard walkthrough instead →"
-                buttonText="Send the Walkthrough"
-              />
-            </div>
+            <p className="text-[#a3a3a3] text-sm">
+              Ready to buy?{' '}
+              <Link
+                href="https://www.detailprocrm.com/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee] transition-colors"
+              >
+                Go straight to pricing →
+              </Link>
+            </p>
           </div>
         </section>
+
       </main>
       <Footer />
     </>
