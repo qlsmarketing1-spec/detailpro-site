@@ -36,8 +36,13 @@ export default function MiniLeadForm({
       });
       if (res.ok) {
         setFormState('success');
-        if (typeof window !== 'undefined' && (window as any).fbq) {
-          (window as any).fbq('track', 'Lead', { content_name: source });
+        if (typeof window !== 'undefined') {
+          if ((window as any).fbq) {
+            (window as any).fbq('track', 'Lead', { content_name: source });
+          }
+          if ((window as any).gtag) {
+            (window as any).gtag('event', 'generate_lead', { source });
+          }
         }
       } else {
         setFormState('error');
