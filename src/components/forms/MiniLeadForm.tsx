@@ -34,7 +34,14 @@ export default function MiniLeadForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, name: showName ? name : undefined, source }),
       });
-      setFormState(res.ok ? 'success' : 'error');
+      if (res.ok) {
+        setFormState('success');
+        if (typeof window !== 'undefined' && (window as any).fbq) {
+          (window as any).fbq('track', 'Lead', { content_name: source });
+        }
+      } else {
+        setFormState('error');
+      }
     } catch {
       setFormState('error');
     }
