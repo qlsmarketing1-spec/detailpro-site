@@ -17,7 +17,8 @@ export async function POST(request: Request) {
   const attributes: Record<string, unknown> = {};
   if (name) attributes.FIRSTNAME = name;
   if (phone) attributes.SMS = phone;
-  if (source) attributes.SOURCE = source;
+  if (phone) attributes.PHONE = phone;
+  if (source) attributes.LEAD_SOURCE = source;
   if (websiteUrl) attributes.WEBSITE_URL = websiteUrl;
 
   try {
