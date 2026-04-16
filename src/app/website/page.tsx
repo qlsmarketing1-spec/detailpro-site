@@ -159,12 +159,6 @@ export default function WebsitePage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#050119]/40 pointer-events-none" />
                 </div>
 
-                {/* Floating stat badge */}
-                <div className="absolute bottom-12 -left-4 bg-[#0d0630]/90 backdrop-blur-sm border border-[#5e25fa]/30 rounded-2xl px-4 py-3 shadow-xl z-10">
-                  <p className="text-[#a78bfa] text-xs font-semibold uppercase tracking-widest mb-1">Avg. first booking</p>
-                  <p className="text-[#e7e6ee] text-2xl font-black">7 days</p>
-                  <p className="text-[#a3a3a3] text-xs">after going live</p>
-                </div>
               </div>
 
             </div>
