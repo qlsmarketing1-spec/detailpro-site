@@ -278,14 +278,6 @@ export default function SoftwarePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 {
-                  title: 'Jobber quotes go to spam',
-                  desc: "Estimates sent from jobbermail.com hit the junk folder. Over 60% of quotes are never opened. You're sending proposals into a black hole.",
-                },
-                {
-                  title: 'HCP outages and billing fights',
-                  desc: "VoIP outages lasting 30+ days. Held funds. Billing practices operators call predatory. Your business running on someone else's reliability.",
-                },
-                {
                   title: 'Leads lost in DMs and texts',
                   desc: "Your personal phone is your CRM. Leads fall through when you're under a car. You can't close jobs you've forgotten about.",
                 },
