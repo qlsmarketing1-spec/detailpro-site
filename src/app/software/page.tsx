@@ -66,19 +66,14 @@ export default function SoftwarePage() {
             <p className="text-[#a3a3a3] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
               DetailPro CRM manages your consumer pipeline, fleet accounts, and speed-to-lead automation in one place — so jobs close while you're under a car.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] text-lg">
-                Book a Free CRM Demo
-              </CalendlyButton>
-              <Link
-                href="https://www.detailprocrm.com/pricing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#a3a3a3] hover:text-[#e7e6ee] text-sm font-medium underline underline-offset-4 transition-colors"
-              >
-                See pricing →
-              </Link>
-            </div>
+            <Link
+              href="https://www.detailprocrm.com/pricing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#5e25fa] hover:bg-[#4d1fe0] text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] text-lg"
+            >
+              Start Your 7-Day Free Trial
+            </Link>
           </div>
         </section>
 
@@ -330,7 +325,7 @@ export default function SoftwarePage() {
               rel="noopener noreferrer"
               className="inline-block border border-white/15 hover:border-[#5e25fa]/50 text-[#e7e6ee] font-semibold px-8 py-3 rounded-full text-sm transition-all hover:bg-white/5"
             >
-              See full pricing and plan details →
+              Start your 7-day free trial →
             </Link>
           </div>
         </section>
@@ -362,14 +357,14 @@ export default function SoftwarePage() {
               Book a Free CRM Demo
             </CalendlyButton>
             <p className="text-[#a3a3a3] text-sm">
-              Ready to buy?{' '}
+              Skip the call?{' '}
               <Link
                 href="https://www.detailprocrm.com/pricing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee] transition-colors"
               >
-                Go straight to pricing →
+                Start your 7-day free trial →
               </Link>
             </p>
           </div>
