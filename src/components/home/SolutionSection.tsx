@@ -11,7 +11,7 @@ export default function SolutionSection() {
             The DetailPro System
           </h2>
           <p className="font-serif-italic text-2xl md:text-3xl text-[#a3a3a3]">
-            Software + ads management, built inside the industry.
+            Ads, automation, and systems — built around how detailing actually grows.
           </p>
         </div>
 
@@ -57,22 +57,19 @@ export default function SolutionSection() {
             </div>
           </div>
 
-          {/* Card 3: Detailing CRM */}
+          {/* Card 3: Lead Connector */}
           <div className="bg-gradient-to-br from-blue-600/15 to-blue-900/10 border border-blue-500/25 rounded-3xl p-8 flex flex-col">
             <div className="w-12 h-12 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-[#e7e6ee] mb-3">Detailing CRM</h3>
+            <h3 className="text-xl font-bold text-[#e7e6ee] mb-3">Lead-to-Booking Connector</h3>
             <p className="text-[#a3a3a3] leading-relaxed flex-1">
-              Pipelines built around how detailers actually close. Knows the difference between a
-              $500 wash and a $35k ceramic job. Manages consumer, fleet, and maintenance in one place.
+              A lightweight layer that catches every inbound lead and routes it to your booking system instantly — before they check your competitor's page. No bloated software, no steep learning curve.
             </p>
             <div className="mt-6 flex items-center gap-2 text-blue-400 text-sm font-semibold">
-              <span>You own the system</span>
-              <span className="text-white/20">·</span>
-              <span>Built for margins</span>
+              <span>Works with your existing tools</span>
             </div>
           </div>
         </div>

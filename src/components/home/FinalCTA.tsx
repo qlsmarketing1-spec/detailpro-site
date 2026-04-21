@@ -20,7 +20,7 @@ export default function FinalCTA() {
 
       <div className="relative max-w-4xl mx-auto text-center">
         {/* Label */}
-        <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-6">Ready to Fix the Leak?</p>
+        <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-6">Ready to grow?</p>
 
         {/* Headline */}
         <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-[#e7e6ee] leading-[1.0] mb-6 tracking-tight">
@@ -31,10 +31,9 @@ export default function FinalCTA() {
 
         {/* Sub */}
         <p className="text-[#a3a3a3] text-xl mb-4 max-w-2xl mx-auto leading-relaxed">
-          DetailPro is not for everyone. It&apos;s for serious operators who are ready to stop trading time
-          for dollars and start building a system that works without them.
+          DetailPro isn&apos;t an agency you hire and forget. It&apos;s a partnership — we run the ads, build the systems, and stay invested in your growth because our revenue scales with yours.
         </p>
-        <p className="text-[#e7e6ee] font-bold text-lg mb-12">Only pay for results.</p>
+        <p className="text-[#e7e6ee] font-bold text-lg mb-12">We only win when you win.</p>
 
         {/* CTA */}
         <CalendlyButton className="bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-black px-12 py-6 rounded-full text-xl transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(94,37,250,0.5)] mb-4">
@@ -43,12 +42,12 @@ export default function FinalCTA() {
 
         {/* Self-serve escape valve */}
         <p className="text-[#a3a3a3] text-sm mb-10">
-          Not ready for ads yet?{' '}
+          Not ready for the full partnership?{' '}
           <a
-            href="/software"
+            href="/website"
             className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee] transition-colors"
           >
-            Start with the CRM →
+            Start with a website →
           </a>
         </p>
 

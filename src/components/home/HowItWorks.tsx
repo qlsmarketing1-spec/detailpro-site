@@ -2,26 +2,26 @@ const steps = [
   {
     number: '01',
     day: 'Day 1',
-    title: 'System Install',
+    title: 'We Build Your System',
     description:
-      'Ads connected, CRM live, automations firing. We handle the full setup — no homework for you. By the end of Day 1, your pipeline is running.',
-    detail: 'Ads + CRM + automations — live on day one',
+      'Ads configured, lead automation live, booking connector installed. We handle the full setup — no homework for you. By the end of Day 1, inbound leads are being captured and routed automatically.',
+    detail: 'Ads + automation + booking flow — live on day one',
   },
   {
     number: '02',
     day: 'Days 1–7',
     title: 'Leads Start Moving',
     description:
-      'Your first campaigns go live. Every inquiry gets an instant SMS response. Qualified leads get booked automatically. You just show up and do the work.',
+      'Your first campaigns go live. Every inquiry gets an instant response. Qualified leads land in your booking system before they check a competitor. You just show up and do the work.',
     detail: 'Speed-to-lead: under 5 minutes, automatically',
   },
   {
     number: '03',
     day: 'Day 30+',
-    title: 'Predictable Revenue',
+    title: 'We Scale Together',
     description:
-      'Fleet pipeline brings in baseline commercial work. Consumer bookings compound. You stop trading hours for dollars and start building something that runs without you.',
-    detail: 'Fleet + consumer + ceramic — all in one dashboard',
+      'Fleet pipeline builds baseline commercial revenue. Consumer bookings compound. We stay in it with you — optimizing, adjusting, and pushing into new channels as your shop grows.',
+    detail: 'Ongoing partnership — not a set-it-and-forget vendor',
   },
 ];
 

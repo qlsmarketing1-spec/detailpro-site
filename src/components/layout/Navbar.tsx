@@ -5,9 +5,8 @@ import Link from 'next/link';
 import { openCalendly } from '@/lib/calendly';
 
 const services = [
-  { label: 'Fill My Calendar', href: '/ads', desc: 'Marketing partnership for detailers that want serious growth' },
-  { label: 'Software', href: '/software', desc: 'Stop losing jobs to slow follow-up' },
-  { label: 'Website Build', href: '/website', desc: 'Turn clicks into customers' },
+  { label: 'Ads + Systems', href: '/ads', desc: 'Our core offer — full growth partnership for serious operators' },
+  { label: 'Website & SEO', href: '/website', desc: 'A site that ranks and converts, built in 48 hours' },
 ];
 
 export default function Navbar() {
@@ -65,7 +64,7 @@ export default function Navbar() {
             onClick={() => openCalendly()}
             className="bg-white text-[#050119] font-semibold px-4 py-2 rounded-full text-sm hover:bg-[#e7e6ee] transition-colors"
           >
-            Book A Demo
+            Book a Strategy Call
           </button>
         </div>
 
@@ -114,7 +113,7 @@ export default function Navbar() {
             onClick={() => { setMobileOpen(false); openCalendly(); }}
             className="mt-2 bg-white text-[#050119] font-semibold px-4 py-2.5 rounded-full text-sm hover:bg-[#e7e6ee] transition-colors"
           >
-            Book A Demo
+            Book a Strategy Call
           </button>
         </div>
       )}

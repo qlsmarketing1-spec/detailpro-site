@@ -12,7 +12,7 @@ export default function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2.5 border border-[#5e25fa]/40 bg-[#5e25fa]/10 rounded-full px-4 py-2 mb-10">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5e25fa] animate-pulse" />
-            <span className="text-[#e7e6ee]/90 text-sm font-medium tracking-wide">Done-for-you growth system for detailers</span>
+            <span className="text-[#e7e6ee]/90 text-sm font-medium tracking-wide">Marketing & systems partner for auto detailers</span>
           </div>
 
           {/* H1 — pattern interrupt, outcome-focused, under 10 words */}
@@ -26,8 +26,7 @@ export default function HeroSection() {
 
           {/* Subheadline — under 25 words, addresses core pain */}
           <p className="text-[#a3a3a3] text-lg md:text-xl leading-relaxed max-w-lg mb-10">
-            DetailPro installs the complete acquisition system into your shop — ads, automation,
-            booking, and fleet pipeline — so jobs close while you work.
+            DetailPro is a growth partnership — not an agency, not a software subscription. We run your ads, build your systems, and stay in it with you until the revenue is real and repeatable.
           </p>
 
           {/* CTAs */}
