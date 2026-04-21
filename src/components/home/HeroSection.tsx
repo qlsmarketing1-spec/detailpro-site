@@ -12,7 +12,7 @@ export default function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2.5 border border-[#5e25fa]/40 bg-[#5e25fa]/10 rounded-full px-4 py-2 mb-10">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5e25fa] animate-pulse" />
-            <span className="text-[#e7e6ee]/90 text-sm font-medium tracking-wide">Done-for-you growth partnership for auto detailers</span>
+            <span className="text-[#e7e6ee]/90 text-sm font-medium tracking-wide">Growth partnership for auto detailers</span>
           </div>
 
           {/* H1 — pattern interrupt, outcome-focused, under 10 words */}
