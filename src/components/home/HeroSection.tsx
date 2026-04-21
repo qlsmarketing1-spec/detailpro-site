@@ -26,7 +26,8 @@ export default function HeroSection() {
 
           {/* Subheadline — under 25 words, addresses core pain */}
           <p className="text-[#a3a3a3] text-lg md:text-xl leading-relaxed max-w-lg mb-10">
-            DetailPro is a growth partnership — not an agency, not a software subscription. We run your ads, build your systems, and stay in it with you until the revenue is real and repeatable.
+            DetailPro installs the complete acquisition system into your shop — ads, automation,
+            booking, and fleet pipeline — so jobs close while you work.
           </p>
 
           {/* CTAs */}
