@@ -122,7 +122,7 @@ export default function PrivacyPage() {
               MOTO Technology, LLC<br />
               6925 Lake Harrison Circle<br />
               Chanhassen, MN 55317<br />
-              Email: information@detailpro.tech
+              Email: info@detailpro.tech
             </p>
           </section>
         </div>
