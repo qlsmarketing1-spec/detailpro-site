@@ -46,7 +46,7 @@ export default function SolutionSection() {
             </div>
             <h3 className="text-xl font-bold text-[#e7e6ee] mb-3">Speed-to-Lead Automation</h3>
             <p className="text-[#a3a3a3] leading-relaxed flex-1">
-              Lead inquires at 2pm on a Tuesday while you&apos;re coated in clay bar. An SMS fires in seconds.
+              Lead inquires at 2pm on a Tuesday while you&apos;re ceramic coating a car. An SMS fires in seconds.
               The job is booked before they check the next shop&apos;s page.
             </p>
             <div className="mt-6">
