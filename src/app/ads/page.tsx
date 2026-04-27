@@ -26,12 +26,6 @@ const results = [
     detail: 'Mobile detailer scaled from $6k to $25k/mo in 4 months with Meta ads',
     context: 'Mobile detailer with no prior ad spend. Fully booked within 90 days.',
   },
-  {
-    stat: '$3',
-    label: 'cost per qualified lead',
-    detail: 'Mobile detailer targeting RV owners — $3 per qualified lead from Facebook',
-    context: 'Niche service targeting RV parks. Expanded to two new counties within 60 days.',
-  },
 ];
 
 const included = [
