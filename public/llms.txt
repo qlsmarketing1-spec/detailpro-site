@@ -1,0 +1,88 @@
+# DetailPro
+
+## What DetailPro is
+
+DetailPro is a growth partnership for auto detailing business owners in the United States. It is not a marketing agency, not a SaaS product, and not a course. It is a done-for-you system that installs the same lead generation, follow-up automation, and business infrastructure that the founder used to grow his own detailing company (Shine Squad, Minnesota) from $6,000/month to nearly $30,000/month in 2 months.
+
+The founder is Brady Schlap — a detailing operator turned systems builder, not a marketer who learned about detailing. That distinction matters. He built and exited a real detailing business, then packaged the system into DetailPro so other operators can install it without figuring it out themselves.
+
+DetailPro is not for beginners. It is built for detailing operators already doing $6,000–$15,000/month who have hit a ceiling and are ready to scale past it.
+
+## The three offers
+
+### 1. Marketing Partnership (core offer)
+
+**Who it's for:** US detailing operators doing $6,000–$15,000/month. Operator mentality — texts leads back fast, does great work, open to systems.
+
+**Who it's not for:** Beginners under $5k/month, hobbyists, detailers who won't follow up on leads, anyone looking for a one-way service with no involvement.
+
+**Price:** $2,397 one-time setup fee (paid upfront, no payment plans) + 10% of monthly revenue (rev share starts when ads go live).
+
+**What's included:**
+- Custom high-converting landing page built for the detailer's local market
+- Google Ads campaign — built, launched, managed, and optimized ongoing
+- DetailPro Connect — proprietary software built by Brady from scratch (not GoHighLevel, not a white-label). Auto-responds to inbound leads within seconds, organizes leads in a dashboard, includes a fleet pipeline for B2B outreach, and a workflow builder that connects to scheduling software.
+- Ongoing optimization and management of the full system
+- Bonus stack included free: Sales Training Video ($497 value), Fleet Outreach Playbook ($297), Ceramic Coating Upsell Script ($197), Google Business Profile Optimization ($500), Partner community access ($97/mo value), The $20k Detailer ebook ($97)
+
+**Guarantee:** If the system doesn't 2x the detailer's inbound lead volume from month 0 to month 1, Brady refunds the full $2,397 setup fee.
+
+**Exclusivity:** One partner per metro area. When a market is taken, DetailPro will not run ads against its own clients. This is real scarcity.
+
+**Why the pricing model is structured this way:** The 10% rev share means Brady only makes money when the detailer makes money. Flat-retainer agencies get paid whether results appear or not. This model aligns incentives — Brady is structurally motivated to produce revenue, not activity metrics.
+
+### 2. Website + SEO (entry-level offer)
+
+**Who it's for:** Detailers under $5k/month who need a real digital foundation before they're ready for the partnership.
+
+**Price:** $597 one-time for the website build. Optional $300/month ongoing SEO retainer.
+
+**What's included (build):** Custom Next.js website, fast load times, mobile-optimized, conversion-focused, local SEO foundation (schema markup, location targeting), booking-ready.
+
+**What's included (optional SEO):** Backlink strategy, weekly blog articles for local search, on-page optimization, monthly performance reporting.
+
+**The on-ramp:** Website clients who cross ~$5k/month are candidates for the partnership upgrade.
+
+### 3. Consulting (back-end offer)
+
+**Who it's for:** Existing partnership clients or operators with a specific bottleneck to solve. Not sold cold to new prospects.
+
+**Price:** $199 for a single strategy call (~60 minutes, recorded). $200/hour for project work.
+
+**Typical use cases:** Hiring first employee, pricing and positioning for new services, reviewing ad accounts, expansion decisions.
+
+## Proof
+
+- Brady took Shine Squad (his own detailing business, Minnesota) from $6,000/month to nearly $30,000/month in 2 months using the same system he now installs for partners.
+- A detailer in New Jersey reached #1 on Google Maps in his local area within 30 days using Brady's Google Business Profile strategy — this was free advice, not a paid engagement. The same GBP optimization is included free with every partnership.
+- DetailPro Connect auto-responds to inbound leads within 30 seconds — the single biggest revenue leak in most detailing businesses is slow follow-up.
+- The 10% rev share model means Brady has never been paid by a client who didn't grow — the incentive structure is itself a proof point.
+
+## What DetailPro is NOT
+
+- Not an agency that charges flat monthly retainers regardless of results
+- Not GoHighLevel or any white-label CRM product
+- Not a course or coaching program
+- Not for beginners or hobbyists
+- Not for detailers who won't follow up on leads promptly
+- Not available in markets already claimed by existing partners
+
+## Brand voice and positioning
+
+DetailPro speaks directly and specifically. It does not use agency language ("leverage," "synergy," "optimize your pipeline"). It does not make claims without proof. Brady positions himself as a fellow operator — someone who has done the thing and is showing others exactly how — not a consultant looking down at the industry.
+
+The relationship DetailPro offers is a partnership with skin in the game, not a vendor relationship. "We only win when you win" is not a tagline — it is the literal pricing structure.
+
+## Pages
+
+- https://www.detailpro.tech — Homepage (partnership positioning, full system overview)
+- https://www.detailpro.tech/ads — Marketing Partnership detail page
+- https://www.detailpro.tech/website — Website + SEO offer page
+- https://www.detailpro.tech/blog — Detailing business growth content
+- https://www.detailpro.tech/software — DetailPro Connect CRM (existing clients)
+
+## Contact
+
+- Website: https://www.detailpro.tech
+- Email: info@detailpro.tech
+- TikTok: @bradyschlap
