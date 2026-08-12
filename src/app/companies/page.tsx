@@ -3,10 +3,10 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Partners',
+  title: 'Companies',
 };
 
-export default function PartnersPage() {
+export default function CompaniesPage() {
   return (
     <>
       <Navbar />

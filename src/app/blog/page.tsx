@@ -8,8 +8,8 @@ import { fetchBlogPosts } from '@/lib/contentful';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Auto Detailing Business Blog | Tips & Growth Systems',
-  description: 'Systems, strategies, and insights for detailers ready to dominate their local market.',
+  title: 'Local Service Business Blog | Tips & Growth Systems',
+  description: 'Systems, strategies, and insights for local service owners ready to dominate their market.',
   alternates: {
     canonical: 'https://www.detailpro.tech/blog',
   },
@@ -27,7 +27,7 @@ export default async function BlogPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-[#e7e6ee] mb-4">The Knowledge Hub</h1>
           <p className="text-[#a3a3a3] text-xl max-w-2xl mx-auto">
-            Systems, strategies, and insights for detailers ready to dominate their local market.
+            Systems, strategies, and insights for local service owners ready to dominate their market.
           </p>
         </div>
 

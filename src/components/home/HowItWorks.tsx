@@ -1,42 +1,42 @@
 const steps = [
   {
     number: '01',
-    day: 'Day 1',
-    title: 'We Build Your System',
+    day: 'Weeks 1–4',
+    title: 'We Build & Train',
     description:
-      'Ads configured, lead automation live, booking connector installed. We handle the full setup — no homework for you. By the end of Day 1, inbound leads are being captured and routed automatically.',
-    detail: 'Ads + automation + booking flow — live on day one',
+      "The first four weeks are hands-on. We build the systems, plug them into how the business actually runs, and train the owner on what they need to know. No homework, no guesswork — we do the setup.",
+    detail: 'Website, local search, ads, and automation — all installed',
   },
   {
     number: '02',
-    day: 'Days 1–7',
-    title: 'Leads Start Moving',
+    day: 'Month 2+',
+    title: 'The Business Runs the Loop',
     description:
-      'Your first campaigns go live. Every inquiry gets an instant response. Qualified leads land in your booking system before they check a competitor. You just show up and do the work.',
-    detail: 'Speed-to-lead: under 5 minutes, automatically',
+      'Ads bring in leads. Automations handle booking and rebooking. Service Pro maintains the infrastructure behind the scenes so the owner isn’t the one holding it together.',
+    detail: 'Captures, books, and rebooks customers on its own',
   },
   {
     number: '03',
-    day: 'Day 30+',
-    title: 'We Scale Together',
+    day: '6 Months',
+    title: 'Software-Driven, Not Headcount-Driven',
     description:
-      'Fleet pipeline builds baseline commercial revenue. Consumer bookings compound. We stay in it with you — optimizing, adjusting, and pushing into new channels as your shop grows.',
-    detail: 'Ongoing partnership — not a set-it-and-forget vendor',
+      "Delivery scales through software, not through adding people — which is what keeps it consistent client to client as we move toward largely agentic fulfillment.",
+    detail: 'Built to scale without scaling headcount',
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 px-6 bg-[#050119]">
+    <section id="how-it-works" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
           <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">The Process</p>
-          <h2 className="text-4xl md:text-6xl font-black text-[#e7e6ee] mb-4">
-            From sign-up to booked jobs
+          <h2 className="text-4xl md:text-6xl font-black text-[#050119] mb-4">
+            Hands-on to start,
           </h2>
-          <p className="font-serif-italic text-2xl md:text-3xl text-[#a3a3a3]">
-            in days, not months.
+          <p className="font-serif-italic text-2xl md:text-3xl text-[#6b6b76]">
+            self-running by design.
           </p>
         </div>
 
@@ -69,12 +69,12 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Card */}
-                <div className="bg-white/4 border border-white/10 rounded-3xl p-7 flex-1 hover:bg-white/[0.06] hover:border-[#5e25fa]/30 transition-all">
+                <div className="bg-black/[0.03] border border-black/10 rounded-3xl p-7 flex-1 hover:bg-black/[0.05] hover:border-[#5e25fa]/30 transition-all">
                   <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-2">{step.day}</p>
-                  <h3 className="text-xl font-bold text-[#e7e6ee] mb-4">{step.title}</h3>
-                  <p className="text-[#a3a3a3] leading-relaxed mb-6">{step.description}</p>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="text-[#e7e6ee]/60 text-sm flex items-center gap-2">
+                  <h3 className="text-xl font-bold text-[#050119] mb-4">{step.title}</h3>
+                  <p className="text-[#6b6b76] leading-relaxed mb-6">{step.description}</p>
+                  <div className="border-t border-black/10 pt-4">
+                    <p className="text-[#050119]/60 text-sm flex items-center gap-2">
                       <svg className="w-4 h-4 text-[#5e25fa] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>

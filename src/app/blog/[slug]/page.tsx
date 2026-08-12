@@ -81,10 +81,10 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     image: post.image,
     datePublished: post.publishDate,
-    author: { '@type': 'Organization', name: 'DetailPro' },
+    author: { '@type': 'Organization', name: 'Service Pro' },
     publisher: {
       '@type': 'Organization',
-      name: 'DetailPro',
+      name: 'Service Pro',
       logo: { '@type': 'ImageObject', url: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
@@ -109,10 +109,10 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Author row */}
           <div className="flex items-center gap-3 mb-8 pb-8 border-b border-white/10">
             <div className="w-10 h-10 bg-[#5e25fa] rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-              DP
+              SP
             </div>
             <div>
-              <p className="text-[#e7e6ee] font-semibold text-sm">DetailPro Team · Knowledge Hub</p>
+              <p className="text-[#e7e6ee] font-semibold text-sm">Service Pro Team · Knowledge Hub</p>
               <p className="text-[#a3a3a3] text-xs">
                 {new Date(post.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} · {post.readTime} read
               </p>
@@ -125,9 +125,9 @@ export default async function BlogPostPage({ params }: Props) {
               src={post.image}
               alt={post.imageAlt || post.title}
               fill
+              sizes="(max-width: 768px) 100vw, 768px"
               className="object-cover"
               priority
-              unoptimized
             />
           </div>
 

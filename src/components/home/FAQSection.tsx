@@ -2,48 +2,48 @@ import FAQItem from '@/components/ui/FAQItem';
 
 const faqs = [
   {
-    question: "Why DetailPro instead of other shop management software?",
-    answer: "Most shop management tools hold you hostage with monthly subscription fees and lock you out when you stop paying. DetailPro gives you lifetime access — you own the system. On top of that, DetailPro is built with the most advanced tools for enterprise detailers: full booking, fleet pipeline management, multi-location support, and a CRM that actually understands the margin difference between a car wash and a ceramic job. It's not a repurposed generic tool. It was built from the ground up for this industry.",
+    question: "I'm just starting out — isn't this too much, too soon?",
+    answer: "It's the opposite of too soon. The scariest part of starting a business isn't the idea, it's not knowing whether the foundation under it will hold. Most owners find that out the expensive way — years of guessing, courses, and agencies that dump leads with no system to turn them into a business. Service Pro exists so that risk gets taken off the table on day one. You start with infrastructure that's already proven, not your own trial and error.",
+  },
+  {
+    question: "I've been running this business for 20 years on paper — where do I even start?",
+    answer: "With the first four weeks. That's the hands-on part: we build the systems, plug them into how your business actually runs today, and train you on what you need to know. We're not asking you to rebuild how you operate — we're replacing the paper, spreadsheets, and half-used CRM with a system that runs in the background.",
+  },
+  {
+    question: "What happens after the first 4 weeks?",
+    answer: "The business runs the loop itself. Ads bring in leads, automations handle booking and rebooking, and Service Pro maintains the infrastructure behind the scenes. You're not the one holding it together anymore — that's the whole point.",
   },
   {
     question: "What does 'revenue share' mean — can I get locked in?",
-    answer: "No flat monthly fees, no long-term contracts. We charge 10% of monthly revenue managed through the platform. That means our incentive is exactly the same as yours: grow your revenue. If you're not making money, we're not making money. It's alignment by design.",
-  },
-  {
-    question: "How fast do leads actually get responded to?",
-    answer: "Under 5 minutes — automatically. The second a lead inquires through any connected channel, they receive an SMS. The system follows a proven script to qualify their budget, vehicle, and service interest before you ever pick up the phone. You only step in when a lead is ready to book.",
+    answer: "No flat monthly fees, no long-term contracts. We charge a percentage of monthly revenue managed through the platform. That means our incentive is exactly the same as yours: grow your revenue. If you're not making money, we're not making money. It's alignment by design.",
   },
   {
     question: "What if I'm not getting results in 90 days?",
-    answer: "We go hands-on. Not 'here's a help article' hands-on — we get on a call, find the root cause, and fix it personally. The most common issue is lead follow-up speed, which is why we pre-qualify clients before onboarding. But if the system isn't working, we don't point fingers.",
-  },
-  {
-    question: "Do I need to already be running ads?",
-    answer: "No. We handle the full ad setup — Meta, Google, and the creative — from Day 1. You own the ad accounts and the data. We handle strategy, optimization, and spend management. Starting budget recommendation: $15–25/day to see consistent lead flow.",
+    answer: "We go hands-on. Not 'here's a help article' hands-on — we get on a call, find the root cause, and fix it personally, whether it's lead follow-up, ad targeting, or the systems themselves. If it isn't working, we don't point fingers.",
   },
   {
     question: "Is this just software, or do you manage everything?",
-    answer: "Both. You get lifetime access to DetailPro software (CRM, pipelines, automations, messaging, analytics, booking). Plus done-for-you Meta and Google ads management, full system setup, and fleet lead pipeline management. It's a complete customer acquisition system, not a tool you figure out yourself.",
+    answer: "Both. You get the Service Pro system — website, local search visibility, follow-up automation, and booking. Plus done-for-you advertising, full setup, and ongoing maintenance. It's a complete customer acquisition system, not a tool you have to figure out yourself.",
   },
   {
-    question: "Is DetailPro built for solo operators or teams?",
-    answer: "Both — but the goal is always to get you off the tools. DetailPro builds the infrastructure to make you a top operator in your market, which typically means building a team over time. We're not designed for side hustlers. We're for operators who are serious about building a business.",
+    question: "Why isn't this just headcount — an agency or a hire?",
+    answer: "Because that doesn't scale and it doesn't hold up. Delivery is software-driven, not headcount-driven, which is what lets it stay consistent client to client instead of depending on which account manager you got. We're moving toward largely agentic fulfillment within 6 months — the system gets more capable, not more expensive to run.",
   },
 ];
 
 export default function FAQSection() {
   return (
-    <section className="py-24 px-6 bg-[#050119]">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">FAQ</p>
-          <h2 className="text-4xl md:text-5xl font-black text-[#e7e6ee]">
-            Detailers ask us&hellip;
+          <h2 className="text-4xl md:text-5xl font-black text-[#050119]">
+            Owners ask us&hellip;
           </h2>
         </div>
         <div className="space-y-3">
           {faqs.map((faq) => (
-            <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
+            <FAQItem key={faq.question} question={faq.question} answer={faq.answer} theme="light" />
           ))}
         </div>
       </div>

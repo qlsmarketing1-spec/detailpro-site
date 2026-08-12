@@ -59,14 +59,14 @@ export default function AuditRequestForm({
 
   if (formState === 'success') {
     return (
-      <div className="bg-white/4 border border-white/8 rounded-3xl p-8 text-center">
+      <div className="bg-black/[0.03] border border-black/10 rounded-3xl p-8 text-center">
         <div className="w-12 h-12 bg-green-500/15 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="h-6 w-6 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+          <svg className="h-6 w-6 text-green-500" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-[#e7e6ee] mb-2">Got it — we'll be in touch.</h3>
-        <p className="text-[#a3a3a3] text-sm">
+        <h3 className="text-xl font-bold text-[#050119] mb-2">Got it — we'll be in touch.</h3>
+        <p className="text-[#6b6b76] text-sm">
           We'll take a look at your website and reach out personally within a day or two.
         </p>
       </div>
@@ -74,9 +74,9 @@ export default function AuditRequestForm({
   }
 
   return (
-    <div className="bg-white/4 border border-white/8 rounded-3xl p-8">
-      <h3 className="text-2xl font-bold text-[#e7e6ee] mb-2">{headline}</h3>
-      <p className="text-[#a3a3a3] text-sm mb-6">{subhead}</p>
+    <div className="bg-black/[0.03] border border-black/10 rounded-3xl p-8">
+      <h3 className="text-2xl font-bold text-[#050119] mb-2">{headline}</h3>
+      <p className="text-[#6b6b76] text-sm mb-6">{subhead}</p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input
@@ -85,7 +85,7 @@ export default function AuditRequestForm({
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="First name"
-            className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-[#e7e6ee] placeholder:text-[#a3a3a3] focus:outline-none focus:border-[#5e25fa]/60"
+            className="bg-white border border-black/15 rounded-xl px-4 py-3 text-sm text-[#050119] placeholder:text-[#6b6b76] focus:outline-none focus:border-[#5e25fa]/60"
           />
           <input
             type="email"
@@ -93,7 +93,7 @@ export default function AuditRequestForm({
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your best email"
-            className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-[#e7e6ee] placeholder:text-[#a3a3a3] focus:outline-none focus:border-[#5e25fa]/60"
+            className="bg-white border border-black/15 rounded-xl px-4 py-3 text-sm text-[#050119] placeholder:text-[#6b6b76] focus:outline-none focus:border-[#5e25fa]/60"
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -102,7 +102,7 @@ export default function AuditRequestForm({
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="Phone (optional)"
-            className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-[#e7e6ee] placeholder:text-[#a3a3a3] focus:outline-none focus:border-[#5e25fa]/60"
+            className="bg-white border border-black/15 rounded-xl px-4 py-3 text-sm text-[#050119] placeholder:text-[#6b6b76] focus:outline-none focus:border-[#5e25fa]/60"
           />
           <input
             type="text"
@@ -110,7 +110,7 @@ export default function AuditRequestForm({
             value={websiteUrl}
             onChange={(e) => setWebsiteUrl(e.target.value)}
             placeholder="Your website URL"
-            className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-[#e7e6ee] placeholder:text-[#a3a3a3] focus:outline-none focus:border-[#5e25fa]/60"
+            className="bg-white border border-black/15 rounded-xl px-4 py-3 text-sm text-[#050119] placeholder:text-[#6b6b76] focus:outline-none focus:border-[#5e25fa]/60"
           />
         </div>
         <button
@@ -121,7 +121,7 @@ export default function AuditRequestForm({
           {formState === 'loading' ? 'Sending...' : context === 'ads-page' ? 'Request My Free Ads Review' : 'Send My Info'}
         </button>
         <FormStatus state={formState} />
-        <p className="text-[#a3a3a3] text-xs text-center">Free. No pitch, no pressure — just a real look at your business.</p>
+        <p className="text-[#6b6b76] text-xs text-center">Free. No pitch, no pressure — just a real look at your business.</p>
       </form>
     </div>
   );
