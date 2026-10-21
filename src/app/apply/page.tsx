@@ -1,10 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import QuizShell from '@/components/quiz/QuizShell';
 import QuizOptionList, { QuizOption } from '@/components/quiz/QuizOptionList';
 import { openCalendly } from '@/lib/calendly';
+import FAQItem from '@/components/ui/FAQItem';
+import { APPLY_FAQS } from '@/data/faqs';
+import { trackLead } from '@/lib/analytics';
 
 /* ================================================================
    QUESTION BANK — ported from the original quiz funnel, unchanged.
@@ -243,7 +246,11 @@ export default function ApplyPage() {
   const [qIndex, setQIndex] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [contact, setContact] = useState({ name: '', email: '', phone: '' });
-  const [ticketNumber] = useState(() => 'SP-' + Math.floor(100000 + Math.random() * 899999));
+  // Generated after mount so server and client HTML match (a random value in the initializer caused a hydration mismatch).
+  const [ticketNumber, setTicketNumber] = useState('SP-000000');
+  useEffect(() => {
+    setTicketNumber('SP-' + Math.floor(100000 + Math.random() * 899999));
+  }, []);
   const [submitError, setSubmitError] = useState(false);
 
   const TOTAL_STEPS = QUESTIONS.length;
@@ -307,7 +314,8 @@ export default function ApplyPage() {
           phone: contact.phone,
         }),
       });
-      if (!res.ok) setSubmitError(true);
+      if (res.ok) trackLead('apply');
+      else setSubmitError(true);
     } catch {
       setSubmitError(true);
     }
@@ -325,7 +333,7 @@ export default function ApplyPage() {
   const ruler = screen === 'question' ? { section: QUESTIONS[qIndex].section, index: qIndex, total: TOTAL_STEPS } : null;
 
   return (
-    <QuizShell ticketNumber={ticketNumber} ruler={ruler}>
+    <QuizShell ticketNumber={ticketNumber} ruler={ruler} below={screen === 'intro' ? <ApplyFAQ /> : null}>
       {screen === 'intro' && <IntroScreen onStart={() => setScreen('branch')} />}
       {screen === 'branch' && <BranchScreen onSelect={handleBranchSelect} />}
       {screen === 'question' && (
@@ -345,6 +353,19 @@ export default function ApplyPage() {
       {screen === 'loading' && <LoadingScreen />}
       {screen === 'results' && <ResultsScreen answers={answers} />}
     </QuizShell>
+  );
+}
+
+function ApplyFAQ() {
+  return (
+    <section aria-labelledby="apply-faq" className="mt-12 w-full max-w-[640px]">
+      <h2 id="apply-faq" className="font-serif text-2xl font-medium text-[#050119] mb-4">Before you apply</h2>
+      <div className="flex flex-col gap-3">
+        {APPLY_FAQS.map((faq) => (
+          <FAQItem key={faq.question} question={faq.question} answer={faq.answer} theme="light" />
+        ))}
+      </div>
+    </section>
   );
 }
 

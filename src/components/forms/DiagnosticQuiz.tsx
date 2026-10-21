@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { FormState, QuizTier } from '@/lib/types';
 import CalendlyButton from '@/components/ui/CalendlyButton';
+import { trackLead } from '@/lib/analytics';
 
 // --- Data ---
 const diagnosticQuestions = [
@@ -118,6 +119,7 @@ export default function DiagnosticQuiz() {
         }),
       });
       if (res.ok) {
+        trackLead('diagnostic_quiz', { score, tier });
         setResult({ score, tier, insightIds });
         setFormState('success');
         setStep(17);
@@ -498,7 +500,7 @@ export default function DiagnosticQuiz() {
               </p>
               <p className="text-[#a3a3a3] text-sm">
                 While you wait:{' '}
-                <a href="/software" className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee]">
+                <a href="/system" className="text-[#e7e6ee]/70 underline underline-offset-2 hover:text-[#e7e6ee]">
                   see how our CRM works →
                 </a>
               </p>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { FormState } from '@/lib/types';
 import FormStatus from '@/components/shared/FormStatus';
+import { trackLead } from '@/lib/analytics';
 
 interface MiniLeadFormProps {
   source: string;
@@ -36,14 +37,7 @@ export default function MiniLeadForm({
       });
       if (res.ok) {
         setFormState('success');
-        if (typeof window !== 'undefined') {
-          if ((window as any).fbq) {
-            (window as any).fbq('track', 'Lead', { content_name: source });
-          }
-          if ((window as any).gtag) {
-            (window as any).gtag('event', 'generate_lead', { source });
-          }
-        }
+        trackLead(source);
       } else {
         setFormState('error');
       }

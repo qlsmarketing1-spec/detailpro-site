@@ -4,6 +4,7 @@ import { useState } from 'react';
 import QuizShell from '@/components/quiz/QuizShell';
 import QuizOptionList, { QuizOption } from '@/components/quiz/QuizOptionList';
 import { openCalendly } from '@/lib/calendly';
+import { trackLead } from '@/lib/analytics';
 
 interface QuizQuestion {
   id: string;
@@ -179,7 +180,8 @@ export default function ApplyExistingPage() {
           phone: contact.phone,
         }),
       });
-      if (!res.ok) setSubmitError(true);
+      if (res.ok) trackLead('apply_existing');
+      else setSubmitError(true);
     } catch {
       setSubmitError(true);
     }
