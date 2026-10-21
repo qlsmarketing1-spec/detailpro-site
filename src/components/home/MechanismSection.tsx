@@ -1,3 +1,5 @@
+import Reveal from '@/components/ui/Reveal';
+
 const FEED = [
   {
     time: '0:00',
@@ -67,7 +69,7 @@ export default function MechanismSection() {
     <section className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
         {/* Text */}
-        <div>
+        <Reveal>
           <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">How It Works</p>
           <h2 className="font-serif text-3xl md:text-4xl xl:text-[44px] font-medium text-[#050119] leading-[1.15] tracking-tight mb-6">
             This isn&apos;t a diagram. It&apos;s what happens automatically.
@@ -77,10 +79,10 @@ export default function MechanismSection() {
             books the job, and follows up months later — every time, whether you&apos;re on
             the tools or on a beach.
           </p>
-        </div>
+        </Reveal>
 
         {/* Live feed card */}
-        <div className="relative">
+        <Reveal delay={120} className="relative">
           <div className="absolute -inset-3 bg-gradient-to-br from-[#5e25fa]/15 via-[#280aa5]/5 to-transparent rounded-[2rem] blur-xl" />
           <div className="relative bg-white border border-black/10 rounded-[2rem] shadow-xl shadow-black/5 p-6 md:p-8">
             {/* Header */}
@@ -130,7 +132,7 @@ export default function MechanismSection() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

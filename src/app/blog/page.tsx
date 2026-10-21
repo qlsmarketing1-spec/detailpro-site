@@ -8,11 +8,18 @@ import { fetchBlogPosts } from '@/lib/contentful';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Local Service Business Blog | Tips & Growth Systems',
-  description: 'Systems, strategies, and insights for local service owners ready to dominate their market.',
+  title: 'Blog: Playbooks for Local Service Owners',
+  description: 'Plain-English playbooks on systems, calls, booking, and growth for local service owners building a real company.',
   alternates: {
     canonical: 'https://www.detailpro.tech/blog',
   },
+  openGraph: {
+    title: 'Blog: Playbooks for Local Service Owners | Service Pro',
+    description: 'Plain-English playbooks on systems, calls, booking, and growth for local service owners building a real company.',
+    url: 'https://www.detailpro.tech/blog',
+    images: ['/og/blog.jpg'],
+  },
+  twitter: { card: 'summary_large_image', images: ['/og/blog.jpg'] },
 };
 
 export default async function BlogPage() {
@@ -25,9 +32,9 @@ export default async function BlogPage() {
       <Navbar />
       <main className="max-w-7xl mx-auto px-4 py-24">
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-[#e7e6ee] mb-4">The Knowledge Hub</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-[#e7e6ee] mb-4">The Service Pro Blog</h1>
           <p className="text-[#a3a3a3] text-xl max-w-2xl mx-auto">
-            Systems, strategies, and insights for local service owners ready to dominate their market.
+            Plain-English playbooks on systems, calls, booking, and growth for owners building a real company.
           </p>
         </div>
 

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import CalendlyButton from '@/components/ui/CalendlyButton';
+import Reveal from '@/components/ui/Reveal';
 
 export default function FinalCTA() {
   return (
@@ -7,8 +8,8 @@ export default function FinalCTA() {
       {/* Background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/foam-wash.jpg"
-          alt="Local service business at work"
+          src="/images/services/pressure-washing-black-suv-side-door.webp"
+          alt=""
           fill
           sizes="100vw"
           className="object-cover opacity-[0.06]"
@@ -19,7 +20,7 @@ export default function FinalCTA() {
       {/* Violet glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#5e25fa]/10 blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-4xl mx-auto text-center">
+      <Reveal className="relative max-w-4xl mx-auto text-center">
         {/* Label */}
         <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-6">Ready to grow?</p>
 
@@ -55,7 +56,7 @@ export default function FinalCTA() {
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

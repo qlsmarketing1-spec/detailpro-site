@@ -23,7 +23,7 @@ export default function Navbar() {
 
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/service-pro-icon.png"
+              src="/images/logos/service-pro-icon.webp"
               alt="ServicePro Logo"
               width={53}
               height={40}
@@ -32,8 +32,8 @@ export default function Navbar() {
           </Link>
 
           <div className="flex items-center gap-6">
-            <Link href="/partners" className="text-[#050119] hover:text-[#5e25fa] transition-colors text-sm font-medium">
-              Partners
+            <Link href="/system" className="text-[#050119] hover:text-[#5e25fa] transition-colors text-sm font-medium">
+              System
             </Link>
             <Link href="/blog" className="text-[#050119] hover:text-[#5e25fa] transition-colors text-sm font-medium">
               Resources
@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Mobile: just the logo, centered */}
         <Link href="/" className="md:hidden flex items-center" onClick={() => setMobileOpen(false)}>
           <Image
-            src="/images/service-pro-icon.png"
+            src="/images/logos/service-pro-icon.webp"
             alt="ServicePro Logo"
             width={53}
             height={40}
@@ -97,11 +97,11 @@ export default function Navbar() {
             Companies
           </Link>
           <Link
-            href="/partners"
+            href="/system"
             onClick={() => setMobileOpen(false)}
             className="px-3 py-2.5 text-[#050119] text-sm font-medium hover:bg-black/5 rounded-xl transition-colors"
           >
-            Partners
+            System
           </Link>
           <Link
             href="/blog"

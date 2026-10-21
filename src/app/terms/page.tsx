@@ -12,11 +12,11 @@ export default function TermsPage() {
       <Navbar />
       <main className="max-w-4xl mx-auto px-4 py-24">
         <h1 className="text-4xl font-bold text-[#e7e6ee] mb-4">Terms of Service</h1>
-        <p className="text-[#a3a3a3] mb-12">Effective Date: January 26, 2026</p>
+        <p className="text-[#a3a3a3] mb-12">Effective Date: September 29, 2026</p>
 
         <div className="article-content text-[#a3a3a3] space-y-8">
           <p>
-            Welcome to DetailPro. These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the website detailpro.tech and the DetailPro platform and services operated by MOTO Technology, LLC (&ldquo;DetailPro,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).
+            Welcome to ServicePro. These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the website detailpro.tech and the ServicePro and DetailPro platforms, software, and services operated by MOTO Technology, LLC dba ServicePro (&ldquo;ServicePro,&rdquo; which includes the business and platforms that operate under the names ServicePro, Service Pro, and DetailPro; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). ServicePro is the current name of the business formerly and still also known as DetailPro. References to either name in these Terms, on our website, or in your Service Agreement refer to the same business.
           </p>
           <p>
             By accessing or using our services, you agree to be bound by these Terms. If you do not agree to these Terms, do not use our services.
@@ -25,7 +25,7 @@ export default function TermsPage() {
           <section>
             <h2>1. Description of Services</h2>
             <p>
-              DetailPro provides a sales and growth system built for auto detailing businesses. Our services include a detailing-industry-specific CRM, lead management tools, automated follow-up systems, and optional advertising management services. The specific services and fees applicable to your use are governed by your Service Agreement with us.
+              ServicePro provides a sales and growth system for local service businesses, including auto detailing and other trades. Our services may include website and local search setup, Google Business Profile and review tools, advertising management, an AI voice agent and call answering, a CRM with booking, follow-up, and customer reactivation automations (including the DetailPro CRM), and mentorship and playbooks. The specific services and fees applicable to your use are governed by your Service Agreement with us. Submitting an application through our website does not guarantee acceptance, and we may decline any application.
             </p>
           </section>
 
@@ -60,21 +60,21 @@ export default function TermsPage() {
           <section>
             <h2>5. Intellectual Property</h2>
             <p>
-              The DetailPro platform, including all software, systems, processes, methodologies, templates, automations, workflows, and know-how, is and remains the executive property of MOTO Technology, LLC. You receive only the limited license rights expressly granted in your Service Agreement. No title to or ownership of the platform or any intellectual property rights therein is transferred to you. All rights not expressly granted are reserved by DetailPro.
+              The ServicePro and DetailPro platforms, including all software, systems, processes, methodologies, templates, automations, workflows, and know-how, is and remains the executive property of MOTO Technology, LLC. You receive only the limited license rights expressly granted in your Service Agreement. No title to or ownership of the platform or any intellectual property rights therein is transferred to you. All rights not expressly granted are reserved by ServicePro.
             </p>
           </section>
 
           <section>
             <h2>6. Payment Terms</h2>
             <p>
-              Payment terms, fees, and billing arrangements are governed by your Service Agreement. All payments are processed through Stripe. You agree to provide accurate billing information and authorize us to charge the applicable fees. If you elect advertising management services, you understand that advertising spend is paid directly by you to the applicable advertising platforms (such as Google and Meta) and is separate from fees paid to DetailPro.
+              Payment terms, fees, and billing arrangements, which may include one-time, recurring, and revenue-based fees, are governed by your Service Agreement. All payments are processed through Stripe. You agree to provide accurate billing information and authorize us to charge the applicable fees. If you elect advertising management services, you understand that advertising spend is paid directly by you to the applicable advertising platforms (such as Google and Meta) and is separate from fees paid to ServicePro. ServicePro does not take an ownership interest in your business under these Terms.
             </p>
           </section>
 
           <section>
             <h2>7. Third-Party Services</h2>
             <p>
-              Our services integrate with third-party services including Stripe for payment processing and Twilio for SMS and messaging. Your use of these third-party services is subject to their respective terms of service and privacy policies. We are not responsible for the acts or omissions of any third-party service providers.
+              Our services integrate with third-party services including Stripe for payment processing, Twilio for calls, SMS, and messaging, Google and Meta for advertising and analytics, Calendly for scheduling, and providers of AI voice and language technology. Your use of these third-party services is subject to their respective terms of service and privacy policies. We are not responsible for the acts or omissions of any third-party service providers.
             </p>
           </section>
 
@@ -84,24 +84,24 @@ export default function TermsPage() {
               THE SERVICES ARE PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.
             </p>
             <p>
-              DetailPro does not guarantee any specific results, including but not limited to: a specific number of leads, a specific cost per lead, a specific number of booked jobs, revenue growth, profitability, or return on advertising spend. Performance depends on many factors including market conditions, competition, your responsiveness, advertising budget, seasonality, and your pricing and service quality.
+              ServicePro does not guarantee any specific results, including but not limited to: a specific number of leads, a specific cost per lead, a specific number of booked jobs, revenue growth, profitability, or return on advertising spend. Performance depends on many factors including market conditions, competition, your responsiveness, advertising budget, seasonality, and your pricing and service quality. Any examples on our website of industry transactions, other businesses, or other people&apos;s results are provided for illustration only and are not a promise or estimate of what you will earn or achieve.
             </p>
           </section>
 
           <section>
             <h2>9. Limitation of Liability</h2>
             <p>
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, DETAILPRO&apos;S TOTAL LIABILITY ARISING OUT OF OR RELATED TO THESE TERMS OR YOUR USE OF THE SERVICES SHALL NOT EXCEED THE AMOUNT OF FEES ACTUALLY PAID BY YOU TO DETAILPRO DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, SERVICEPRO&apos;S TOTAL LIABILITY ARISING OUT OF OR RELATED TO THESE TERMS OR YOUR USE OF THE SERVICES SHALL NOT EXCEED THE AMOUNT OF FEES ACTUALLY PAID BY YOU TO SERVICEPRO DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
             </p>
             <p>
-              IN NO EVENT SHALL DETAILPRO BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOST REVENUE, LOST DATA, OR BUSINESS INTERRUPTION, EVEN IF DETAILPRO HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+              IN NO EVENT SHALL SERVICEPRO BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOST REVENUE, LOST DATA, OR BUSINESS INTERRUPTION, EVEN IF SERVICEPRO HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
             </p>
           </section>
 
           <section>
             <h2>10. Indemnification</h2>
             <p>
-              You agree to indemnify, defend, and hold harmless DetailPro and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys&apos; fees) arising out of or related to your use of the services, your User Content, your violation of these Terms, or your violation of any rights of another party.
+              You agree to indemnify, defend, and hold harmless ServicePro and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys&apos; fees) arising out of or related to your use of the services, your User Content, your violation of these Terms, or your violation of any rights of another party.
             </p>
           </section>
 
@@ -143,7 +143,7 @@ export default function TermsPage() {
           <section>
             <h2>16. Entire Agreement</h2>
             <p>
-              These Terms, together with your Service Agreement and our Privacy Policy, constitute the entire agreement between you and DetailPro regarding your use of the services and supersede all prior agreements and understandings.
+              These Terms, together with your Service Agreement and our Privacy Policy, constitute the entire agreement between you and ServicePro regarding your use of the services and supersede all prior agreements and understandings.
             </p>
           </section>
 
@@ -151,7 +151,7 @@ export default function TermsPage() {
             <h2>17. Contact Us</h2>
             <p>If you have questions about these Terms, please contact us at:</p>
             <p>
-              MOTO Technology, LLC<br />
+              MOTO Technology, LLC dba ServicePro (also known as DetailPro)<br />
               6925 Lake Harrison Cir<br />
               Chanhassen, MN 55317<br />
               Email: info@detailpro.tech

@@ -13,9 +13,11 @@ interface QuizShellProps {
   ticketNumber: string;
   ruler?: RulerProps | null;
   children: React.ReactNode;
+  /** Optional content rendered under the card (e.g. the FAQ on the intro screen). */
+  below?: React.ReactNode;
 }
 
-export default function QuizShell({ ticketNumber, ruler, children }: QuizShellProps) {
+export default function QuizShell({ ticketNumber, ruler, children, below }: QuizShellProps) {
   return (
     <div className="qz-root">
       <div className="qz-glow" />
@@ -23,7 +25,7 @@ export default function QuizShell({ ticketNumber, ruler, children }: QuizShellPr
         <div className="qz-masthead">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/service-pro-icon.png"
+              src="/images/logos/service-pro-icon.webp"
               alt="Service Pro"
               width={38}
               height={29}
@@ -48,6 +50,8 @@ export default function QuizShell({ ticketNumber, ruler, children }: QuizShellPr
         )}
 
         <div className="qz-card">{children}</div>
+
+        {below}
 
         <div className="qz-footer-note">
           © {new Date().getFullYear()} Service Pro — this takes about 2 minutes.

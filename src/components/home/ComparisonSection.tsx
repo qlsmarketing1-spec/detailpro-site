@@ -1,3 +1,5 @@
+import Reveal from '@/components/ui/Reveal';
+
 type Status = 'yes' | 'no' | 'partial';
 
 type Row =
@@ -7,12 +9,10 @@ type Row =
 const ROWS: Row[] = [
   { type: 'stat', label: 'Local industry leader', spValue: '6–18 months', diyValue: '2–5 years' },
   { type: 'stat', label: 'Time to first booked job', spValue: 'Days', diyValue: 'Weeks' },
-  { type: 'status', label: 'Ranks on Google Maps / local search', sp: 'yes', diy: 'partial' },
   { type: 'status', label: 'After-hours & missed-call coverage', sp: 'yes', diy: 'no' },
   { type: 'status', label: 'Review generation on autopilot', sp: 'yes', diy: 'no' },
   { type: 'status', label: 'Follow-up automated 24/7', sp: 'yes', diy: 'no' },
   { type: 'status', label: 'One system for leads — website, ads, SMS & forms connected', sp: 'yes', diy: 'no' },
-  { type: 'status', label: 'You own the system', sp: 'yes', diy: 'yes' },
   { type: 'status', label: 'Ongoing maintenance included', sp: 'yes', diy: 'no' },
 ];
 
@@ -46,14 +46,14 @@ export default function ComparisonSection() {
   return (
     <section className="py-24 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14">
           <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">The Alternative</p>
           <h2 className="font-serif text-3xl md:text-4xl xl:text-[44px] font-medium text-[#050119] leading-[1.15] tracking-tight">
             Compared to figuring it out alone.
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="overflow-x-auto">
+        <Reveal delay={100} className="overflow-x-auto">
           <div className="min-w-[480px]">
             {/* Header row */}
             <div className="grid grid-cols-[1.6fr_1fr_1fr]">
@@ -71,25 +71,25 @@ export default function ComparisonSection() {
             {ROWS.map((row, i) => {
               const isLast = i === ROWS.length - 1;
               return (
-                <div key={row.label} className="grid grid-cols-[1.6fr_1fr_1fr] items-center">
-                  <div className="py-4 pr-4 border-t border-black/10">
+                <div key={row.label} className="grid grid-cols-[1.6fr_1fr_1fr] border-t border-black/10">
+                  <div className="flex items-center py-4 pr-4">
                     <p className="text-[#050119] text-sm font-medium">{row.label}</p>
                   </div>
                   {row.type === 'status' ? (
                     <>
-                      <div className="flex justify-center py-4 border-t border-black/10">
+                      <div className="flex items-center justify-center py-4">
                         <StatusIcon status={row.diy} />
                       </div>
-                      <div className={`flex justify-center py-4 border-t border-[#5e25fa]/15 bg-[#5e25fa]/6 ${isLast ? 'rounded-b-2xl' : ''}`}>
+                      <div className={`flex items-center justify-center py-4 bg-[#5e25fa]/6 ${isLast ? 'rounded-b-2xl' : ''}`}>
                         <StatusIcon status={row.sp} />
                       </div>
                     </>
                   ) : (
                     <>
-                      <div className="flex justify-center py-4 border-t border-black/10">
+                      <div className="flex items-center justify-center py-4">
                         <span className="text-[#6b6b76] text-sm font-semibold bg-black/5 rounded-full px-3 py-1">{row.diyValue}</span>
                       </div>
-                      <div className={`flex justify-center py-4 border-t border-[#5e25fa]/15 bg-[#5e25fa]/6 ${isLast ? 'rounded-b-2xl' : ''}`}>
+                      <div className={`flex items-center justify-center py-4 bg-[#5e25fa]/6 ${isLast ? 'rounded-b-2xl' : ''}`}>
                         <span className="text-[#5e25fa] text-sm font-bold bg-white rounded-full px-3 py-1 shadow-sm">{row.spValue}</span>
                       </div>
                     </>
@@ -98,7 +98,7 @@ export default function ComparisonSection() {
               );
             })}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

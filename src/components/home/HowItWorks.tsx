@@ -1,77 +1,65 @@
+import Link from 'next/link';
+import Reveal from '@/components/ui/Reveal';
+
 const steps = [
   {
     number: '01',
-    day: 'Weeks 1–4',
-    title: 'We Build & Train',
+    title: 'Apply',
     description:
-      "The first four weeks are hands-on. We build the systems, plug them into how the business actually runs, and train the owner on what they need to know. No homework, no guesswork — we do the setup.",
-    detail: 'Website, local search, ads, and automation — all installed',
+      'Tell us about your business and your market. If it looks like a fit, we talk through where you are and what to build first.',
+    detail: 'A short application, then a conversation',
   },
   {
     number: '02',
-    day: 'Month 2+',
-    title: 'The Business Runs the Loop',
+    title: 'Build',
     description:
-      'Ads bring in leads. Automations handle booking and rebooking. Service Pro maintains the infrastructure behind the scenes so the owner isn’t the one holding it together.',
-    detail: 'Captures, books, and rebooks customers on its own',
+      'We set up your website, ads, and automations, build them around your company, and show you how to run it.',
+    detail: 'Website, ads, SMS, and reviews connected',
   },
   {
     number: '03',
-    day: '6 Months',
-    title: 'Software-Driven, Not Headcount-Driven',
+    title: 'Grow',
     description:
-      "Delivery scales through software, not through adding people — which is what keeps it consistent client to client as we move toward largely agentic fulfillment.",
-    detail: 'Built to scale without scaling headcount',
+      'The system handles follow-up, reviews, and rebooking while we maintain it and keep advising as you expand.',
+    detail: 'Ongoing maintenance and mentorship',
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-20">
+    <section id="how-it-works" className="scroll-mt-16 py-24 px-6 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <Reveal className="text-center mb-16">
           <p className="text-[#5e25fa] font-semibold uppercase tracking-widest text-sm mb-4">The Process</p>
-          <h2 className="text-4xl md:text-6xl font-black text-[#050119] mb-4">
-            Hands-on to start,
+          <h2 className="font-serif text-3xl md:text-4xl xl:text-[44px] font-medium text-[#050119] leading-[1.15] tracking-tight">
+            Apply. Build. Grow.
           </h2>
-          <p className="font-serif-italic text-2xl md:text-3xl text-[#6b6b76]">
-            self-running by design.
-          </p>
-        </div>
+        </Reveal>
 
-        {/* Steps — desktop: horizontal timeline, mobile: stacked */}
         <div className="relative">
-          {/* Connector line (desktop only) */}
-          <div className="hidden md:block absolute top-16 left-0 right-0 h-px">
-            <div className="max-w-4xl mx-auto">
-              <div
-                className="h-px w-full"
-                style={{
-                  backgroundImage: 'repeating-linear-gradient(90deg, #5e25fa 0, #5e25fa 8px, transparent 8px, transparent 20px)',
-                }}
-              />
-            </div>
-          </div>
+          {/* Connector line between step markers (desktop only) */}
+          <div
+            className="hidden md:block absolute top-7 h-px"
+            style={{
+              left: 'calc((100% - 6rem) / 6)',
+              right: 'calc((100% - 6rem) / 6)',
+              backgroundImage:
+                'repeating-linear-gradient(90deg, rgba(94,37,250,0.35) 0, rgba(94,37,250,0.35) 8px, transparent 8px, transparent 16px)',
+            }}
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {steps.map((step, i) => (
-              <div key={i} className="flex flex-col">
-                {/* Number circle */}
+              <Reveal key={step.number} delay={i * 120} className="flex flex-col h-full">
                 <div className="flex md:justify-center mb-6">
-                  <div className="relative">
-                    <div className="w-14 h-14 rounded-full bg-[#5e25fa] flex items-center justify-center font-black text-white text-lg z-10 relative shadow-[0_0_30px_rgba(94,37,250,0.5)]">
-                      {step.number}
-                    </div>
-                    {/* Glow */}
-                    <div className="absolute inset-0 rounded-full bg-[#5e25fa]/40 blur-lg scale-150" />
+                  <div className="relative z-10 w-14 h-14 rounded-full bg-[#5e25fa] flex items-center justify-center font-bold text-white text-lg shadow-[0_0_0_6px_white]">
+                    {step.number}
                   </div>
                 </div>
 
-                {/* Card */}
-                <div className="bg-black/[0.03] border border-black/10 rounded-3xl p-7 flex-1 hover:bg-black/[0.05] hover:border-[#5e25fa]/30 transition-all">
-                  <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-2">{step.day}</p>
-                  <h3 className="text-xl font-bold text-[#050119] mb-4">{step.title}</h3>
+                <div className="flex-1 bg-white border border-black/10 rounded-3xl p-7 transition-all duration-300 hover:border-[#5e25fa]/30 hover:shadow-lg hover:shadow-[#5e25fa]/5 motion-safe:hover:-translate-y-1">
+                  <p className="text-[#5e25fa] text-xs font-bold uppercase tracking-widest mb-2">Step {i + 1}</p>
+                  <h3 className="font-serif text-2xl font-medium text-[#050119] mb-3">{step.title}</h3>
                   <p className="text-[#6b6b76] leading-relaxed mb-6">{step.description}</p>
                   <div className="border-t border-black/10 pt-4">
                     <p className="text-[#050119]/60 text-sm flex items-center gap-2">
@@ -82,10 +70,19 @@ export default function HowItWorks() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
+
+        <Reveal className="flex justify-center mt-14">
+          <Link
+            href="/apply"
+            className="bg-[#5e25fa] hover:bg-[#4a1db8] text-white font-bold px-9 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(94,37,250,0.45)] active:scale-95 text-center"
+          >
+            Apply Now
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

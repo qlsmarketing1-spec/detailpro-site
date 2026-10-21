@@ -6,8 +6,8 @@ export default function TestimonialSection() {
       {/* Background photo */}
       <div className="absolute inset-0">
         <Image
-          src="/images/repairman-tablet.jpg"
-          alt="Local service business owner working"
+          src="/images/services/auto-repair-shop-owner-reviewing-tablet-and-computer.webp"
+          alt=""
           fill
           sizes="100vw"
           className="object-cover opacity-[0.06]"

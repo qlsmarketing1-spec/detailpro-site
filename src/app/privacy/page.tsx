@@ -12,24 +12,27 @@ export default function PrivacyPage() {
       <Navbar />
       <main className="max-w-4xl mx-auto px-4 py-24">
         <h1 className="text-4xl font-bold text-[#e7e6ee] mb-4">Privacy Policy</h1>
-        <p className="text-[#a3a3a3] mb-12">Effective Date: January 26, 2026</p>
+        <p className="text-[#a3a3a3] mb-12">Effective Date: September 29, 2026</p>
 
         <div className="article-content text-[#a3a3a3] space-y-8">
           <p>
-            MOTO Technology, LLC (&ldquo;DetailPro,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website detailpro.tech and provides the DetailPro platform and related services. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our website and services.
+            MOTO Technology, LLC dba ServicePro (&ldquo;ServicePro,&rdquo; which includes the business and platforms that operate under the names ServicePro, Service Pro, and DetailPro; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates the website detailpro.tech and provides the ServicePro and DetailPro platforms and related services. ServicePro is the current name of the business formerly and still also known as DetailPro, and this Privacy Policy covers both. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our website and services.
           </p>
           <p>
-            By using DetailPro, you agree to the collection and use of information as described in this Privacy Policy. If you do not agree with these practices, please do not use our services.
+            By using ServicePro or DetailPro, you agree to the collection and use of information as described in this Privacy Policy. If you do not agree with these practices, please do not use our services.
           </p>
 
           <section>
             <h2>1. Information We Collect</h2>
             <p>We collect information you provide directly to us, including:</p>
             <ul>
+              <li><strong>Application Information:</strong> When you take our quiz or apply to work with us, we collect your name, email address, phone number, and your answers about your experience, goals, business, and budget.</li>
               <li><strong>Account Information:</strong> When you create an account, we collect your name, email address, phone number, business name, and business address.</li>
               <li><strong>Payment Information:</strong> When you make purchases, our payment processor (Stripe) collects payment card information. We do not store your full payment card details on our servers.</li>
-              <li><strong>Business Data:</strong> Information you upload or input into the platform, including customer leads (names, contact information, vehicle information, addresses), business metrics, and communications.</li>
-              <li><strong>Photos and Media:</strong> Information you upload related to your detailing business or customer vehicles.</li>
+              <li><strong>Business Data:</strong> Information you upload or input into the platform, including customer leads (names, contact information, service details, addresses), business metrics, and communications.</li>
+              <li><strong>Photos and Media:</strong> Images and other files you upload related to your business or your customers&apos; jobs.</li>
+              <li><strong>Calls, Messages, and Recordings:</strong> If you use our call answering, AI voice agent, or messaging tools, we process the calls, voicemails, text messages, transcripts, and recordings between your business and your customers on your behalf.</li>
+              <li><strong>Website and Device Data:</strong> Information collected automatically when you visit our website, such as pages viewed, referring site, approximate location, browser and device type, and cookie identifiers, collected through tools like Google Analytics and the Meta Pixel.</li>
               <li><strong>Communications:</strong> Records of your communications with us, including support requests and feedback.</li>
             </ul>
           </section>
@@ -53,8 +56,9 @@ export default function PrivacyPage() {
             <h2>3. Information Sharing</h2>
             <p>We may share your information in the following circumstances:</p>
             <ul>
-              <li><strong>Service Providers:</strong> We share information with third-party vendors who perform services on our behalf, including Stripe (payment processing) and Twilio (SMS and messaging services).</li>
+              <li><strong>Service Providers:</strong> We share information with third-party vendors who perform services on our behalf, including Stripe (payment processing), Twilio (calls, SMS, and messaging), Calendly (scheduling), and AI voice and language technology providers that help us answer and transcribe calls.</li>
               <li><strong>Advertising Platforms:</strong> If you elect advertising management services, we may share necessary information with advertising platforms (such as Google Ads and Meta/Facebook) to manage your campaigns.</li>
+              <li><strong>Analytics and Advertising:</strong> We use Google Analytics, the Meta Pixel, and similar technologies to measure website traffic and the performance of our own advertising. These providers may collect information through cookies and similar technologies under their own privacy policies. You can limit this through your browser settings, your Google and Meta ad settings, or a browser extension that blocks trackers.</li>
               <li><strong>Legal Requirements:</strong> We may disclose information if required by law, legal process, or government request, or to protect our rights, privacy, safety, or property.</li>
               <li><strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</li>
             </ul>
@@ -90,7 +94,7 @@ export default function PrivacyPage() {
           <section>
             <h2>7. Third-Party Services</h2>
             <p>
-              Our services integrate with third-party services including Stripe for payment processing and Twilio for messaging. These services have their own privacy policies, and we encourage you to review them. We are not responsible for the privacy practices of these third parties.
+              Our services integrate with third-party services including Stripe for payment processing, Twilio for calls and messaging, Calendly for scheduling, and Google and Meta for analytics and advertising. These services have their own privacy policies, and we encourage you to review them. We are not responsible for the privacy practices of these third parties.
             </p>
           </section>
 
@@ -104,7 +108,7 @@ export default function PrivacyPage() {
           <section>
             <h2>9. International Users</h2>
             <p>
-              DetailPro is operated from the United States. If you are accessing our services from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States, where data protection laws may differ from those in your country.
+              ServicePro and DetailPro are operated from the United States. If you are accessing our services from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States, where data protection laws may differ from those in your country.
             </p>
           </section>
 
@@ -119,7 +123,7 @@ export default function PrivacyPage() {
             <h2>11. Contact Us</h2>
             <p>If you have questions about this Privacy Policy or our privacy practices, please contact us at:</p>
             <p>
-              MOTO Technology, LLC<br />
+              MOTO Technology, LLC dba ServicePro (also known as DetailPro)<br />
               6925 Lake Harrison Circle<br />
               Chanhassen, MN 55317<br />
               Email: info@detailpro.tech

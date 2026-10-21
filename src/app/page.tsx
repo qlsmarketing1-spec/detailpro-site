@@ -1,15 +1,21 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import SocialProofSection from '@/components/home/SocialProofSection';
 import LegacyToolsSection from '@/components/home/LegacyToolsSection';
+import SolutionSection from '@/components/home/SolutionSection';
+import HowItWorks from '@/components/home/HowItWorks';
 import MechanismSection from '@/components/home/MechanismSection';
 import IndustriesSection from '@/components/home/IndustriesSection';
 import ComparisonSection from '@/components/home/ComparisonSection';
+import FAQSection from '@/components/home/FAQSection';
 import FinalCTA from '@/components/home/FinalCTA';
+import { HOME_FAQS, faqJsonLd } from '@/data/faqs';
 
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(HOME_FAQS)) }} />
       <Navbar />
       <main>
         <div className="relative bg-white overflow-hidden">
@@ -19,9 +25,13 @@ export default function HomePage() {
           <HeroSection />
         </div>
         <LegacyToolsSection />
+        <SocialProofSection />
+        <SolutionSection />
+        <HowItWorks />
         <MechanismSection />
         <IndustriesSection />
         <ComparisonSection />
+        <FAQSection />
         <FinalCTA />
       </main>
       <Footer />

@@ -1,4 +1,3 @@
-@import url('https://fonts.cdnfonts.com/css/squartiqa-4f');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -70,6 +69,66 @@
 .animate-flow-in { stroke-dasharray: 10 100; animation: flow-inward 3s linear infinite; }
 .animate-feed-in { animation: feed-in 0.6s ease-out both; }
 .animate-pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+
+/* Companies — the trio converges to read as one company */
+@keyframes converge-left {
+  0% { opacity: 0; transform: translateX(-56px) scale(0.94); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes converge-right {
+  0% { opacity: 0; transform: translateX(56px) scale(0.94); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+}
+@keyframes emblem-rise {
+  0% { opacity: 0; transform: translateY(14px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes emblem-stamp {
+  0% { opacity: 0; transform: scale(1.16); }
+  60% { opacity: 1; }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes emblem-halo {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.06); }
+}
+
+.animate-converge-left { animation: converge-left 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-converge-right { animation: converge-right 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-emblem-rise { animation: emblem-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-emblem-stamp { animation: emblem-stamp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-emblem-halo { animation: emblem-halo 5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-converge-left,
+  .animate-converge-right,
+  .animate-emblem-rise,
+  .animate-emblem-stamp,
+  .animate-emblem-halo {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+}
+
+/* Scroll reveal (see components/ui/Reveal.tsx) */
+[data-reveal='hidden'] {
+  opacity: 0;
+  transform: translateY(16px);
+}
+[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
 
 .mask-radial {
   mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);

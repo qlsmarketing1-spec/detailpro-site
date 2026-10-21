@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'Service Pro',
-      logo: { '@type': 'ImageObject', url: 'https://storage.googleapis.com/detail_pro_main/Logos/DetailPro_FinalLogos-02-cropped.svg' },
+      logo: { '@type': 'ImageObject', url: 'https://www.detailpro.tech/images/logos/service-pro-logo.webp' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
   };
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
               SP
             </div>
             <div>
-              <p className="text-[#e7e6ee] font-semibold text-sm">Service Pro Team · Knowledge Hub</p>
+              <p className="text-[#e7e6ee] font-semibold text-sm">Service Pro Team · Blog</p>
               <p className="text-[#a3a3a3] text-xs">
                 {new Date(post.publishDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} · {post.readTime} read
               </p>
