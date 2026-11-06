@@ -1,0 +1,39 @@
+{
+  "_comment": "Custom Brevo contact attributes the site writes. Run `npm run brevo:setup` after adding one here so it exists in Brevo. FIRSTNAME, LASTNAME and SMS are Brevo built-ins and are not listed.",
+  "attributes": [
+    { "name": "PHONE", "type": "text" },
+    { "name": "LEAD_SOURCE", "type": "text" },
+    { "name": "WEBSITE_URL", "type": "text" },
+
+    { "name": "APPLY_PATH", "type": "text" },
+    { "name": "APPLY_TICKET", "type": "text" },
+    { "name": "APPLY_DATE", "type": "date" },
+    { "name": "APPLY_RESULT", "type": "text" },
+    { "name": "APPLY_INTEREST", "type": "text" },
+    { "name": "APPLY_INVEST", "type": "text" },
+    { "name": "APPLY_WHY", "type": "text" },
+    { "name": "APPLY_SUMMARY", "type": "text" },
+    { "name": "APPLY_ANSWERS", "type": "text" },
+
+    { "name": "APPLY_TIME_PER_WEEK", "type": "text" },
+    { "name": "APPLY_INCOME_GOAL", "type": "text" },
+    { "name": "APPLY_FUNDING", "type": "text" },
+
+    { "name": "BIZ_TYPE", "type": "text" },
+    { "name": "BIZ_MRR", "type": "text" },
+    { "name": "BIZ_AGE", "type": "text" },
+    { "name": "BIZ_TEAM_SIZE", "type": "text" },
+    { "name": "BIZ_LEAD_SOURCE", "type": "text" },
+    { "name": "BIZ_WEBSITE", "type": "text" },
+    { "name": "BIZ_GOAL", "type": "text" },
+
+    { "name": "CITY", "type": "text" },
+    { "name": "INSTAGRAM", "type": "text" },
+    { "name": "QUIZ_SCORE", "type": "float" },
+    { "name": "RESULT_TIER", "type": "text" },
+    { "name": "MONTHLY_REVENUE", "type": "text" },
+    { "name": "REVENUE_GOAL", "type": "text" },
+    { "name": "BOTTLENECK", "type": "text" },
+    { "name": "TRIED_ADS", "type": "text" }
+  ]
+}

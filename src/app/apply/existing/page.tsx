@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { labelAnswers } from '@/lib/apply-answers';
 import QuizShell from '@/components/quiz/QuizShell';
 import QuizOptionList, { QuizOption } from '@/components/quiz/QuizOptionList';
 import { openCalendly } from '@/lib/calendly';
@@ -175,6 +176,8 @@ export default function ApplyExistingPage() {
           path: 'existing',
           contact,
           answers: { ...answers, why: contact.why },
+          answerLabels: labelAnswers(QUESTIONS, answers),
+          why: contact.why,
           email: contact.email,
           name: contact.name,
           phone: contact.phone,

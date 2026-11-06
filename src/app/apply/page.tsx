@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import QuizShell from '@/components/quiz/QuizShell';
 import QuizOptionList, { QuizOption } from '@/components/quiz/QuizOptionList';
 import { openCalendly } from '@/lib/calendly';
+import { labelAnswers } from '@/lib/apply-answers';
 import FAQItem from '@/components/ui/FAQItem';
 import { APPLY_FAQS } from '@/data/faqs';
 import { trackLead } from '@/lib/analytics';
@@ -309,6 +310,7 @@ export default function ApplyPage() {
           result: BUSINESSES[resultKey]?.name,
           contact,
           answers,
+          answerLabels: labelAnswers(QUESTIONS, answers),
           email: contact.email,
           name: contact.name,
           phone: contact.phone,
