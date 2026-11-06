@@ -7,11 +7,11 @@ import CompanyShowcase from '@/components/companies/CompanyShowcase';
 export const metadata: Metadata = {
   title: 'Companies',
   description:
-    'The owner-operated local service businesses Service Pro builds alongside: Shine Squad, Reset Auto Detailing, and Spotless Detailing.',
+    'The owner-operated local service businesses Service Pro builds alongside: Shine Squad, Reset Auto Detailing, Spotless Detailing, Gallatin Shrimp Co., and Velocity Car Detailing.',
   alternates: { canonical: 'https://www.detailpro.tech/companies' },
   openGraph: {
     title: 'Companies | Service Pro',
-    description: 'The owner-operated local service businesses Service Pro builds alongside: Shine Squad, Reset Auto Detailing, and Spotless Detailing.',
+    description: 'The owner-operated local service businesses Service Pro builds alongside: Shine Squad, Reset Auto Detailing, Spotless Detailing, Gallatin Shrimp Co., and Velocity Car Detailing.',
     url: 'https://www.detailpro.tech/companies',
     images: ['/og/companies.jpg'],
   },
@@ -85,6 +85,52 @@ const COMPANIES = [
       alt: 'Close-up of a foam-covered wheel and fender on a freshly washed vehicle',
       width: 850,
       height: 1115,
+      focal: '50% 55%',
+    },
+  },
+  {
+    label: 'Gallatin Shrimp Co. — Montana-raised Neocaridina shrimp',
+    logo: {
+      src: '/images/clients/gallatin-shrimp-co/gallatin-shrimp-co-logo.webp',
+      alt: 'Gallatin Shrimp Co. logo — a shrimp in front of Montana mountains',
+      width: 600,
+      height: 600,
+    },
+    hero: {
+      src: '/images/clients/gallatin-shrimp-co/gallatin-shrimp-co-red-cherry-shrimp-colony-tank.webp',
+      alt: 'A planted breeding tank full of red cherry shrimp on mossy driftwood at Gallatin Shrimp Co. in Bozeman, Montana',
+      width: 1000,
+      height: 640,
+      focal: '50% 50%',
+    },
+    portrait: {
+      src: '/images/clients/gallatin-shrimp-co/gallatin-shrimp-co-neocaridina-shrimp-mossy-driftwood.webp',
+      alt: 'Red, blue, yellow, and orange Neocaridina shrimp grazing on moss-covered driftwood in a planted aquarium',
+      width: 941,
+      height: 1672,
+      focal: '50% 50%',
+    },
+  },
+  {
+    label: 'Velocity Car Detailing — mobile car detailing in Bozeman, MT',
+    logo: {
+      src: '/images/clients/velocity-detailing/velocity-detailing-logo.webp',
+      alt: 'Velocity Car Detailing logo',
+      width: 600,
+      height: 173,
+    },
+    hero: {
+      src: '/images/clients/velocity-detailing/velocity-detailing-technician-detailing-navy-porsche-911-driveway.webp',
+      alt: 'A Velocity Car Detailing technician detailing the wheel of a navy Porsche 911 convertible in a driveway',
+      width: 1200,
+      height: 900,
+      focal: '55% 55%',
+    },
+    portrait: {
+      src: '/images/clients/velocity-detailing/velocity-detailing-white-corvette-c8-freshly-detailed-driveway.webp',
+      alt: 'A freshly detailed white Corvette C8 parked in a residential driveway after a mobile detail',
+      width: 600,
+      height: 800,
       focal: '50% 55%',
     },
   },
